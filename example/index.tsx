@@ -1,12 +1,18 @@
-import 'react-app-polyfill/ie11';
-import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Thing } from '../.';
+import 'react-app-polyfill/ie11';
+import React from 'react';
+import { BButton } from '../.';
 
 const App = () => {
   return (
     <div>
-      <Thing />
+      <BButton
+        logoSrc=""
+        user={undefined}
+        open={true}
+        words={['Real', 'Easy', 'Ads']}
+        shape="square"
+      />
     </div>
   );
 };
