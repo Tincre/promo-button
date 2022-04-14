@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   FaFacebook,
   FaTwitter,
@@ -10,7 +9,7 @@ import {
   FaApple,
   FaYoutubeSquare,
   FaInternetExplorer,
-} from 'react-icons/fa';
+} from 'react-icons/fa'; // https://github.com/react-icons/react-icons/issues/154
 
 function resolveTargetLink(targetLink: string) {
   const magicNumber = 8;
