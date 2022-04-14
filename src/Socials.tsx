@@ -108,7 +108,7 @@ export default function Socials({
         />
       );
     });
-    return <>result</>;
+    return <>{result}</>;
   }
   return (
     <div className="inline-flex">
