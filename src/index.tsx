@@ -1,3 +1,4 @@
+import './index.css';
 import React, { Suspense } from 'react';
 import RealEasyLogo from './RealEasyLogo';
 import RangeInput from './RangeInput';
@@ -32,7 +33,7 @@ export function HowItWorks() {
         <span className="font-bold text-xl">3. </span>
         <span className="font-medium text-sm">
           {`Focus on what matters: your music, your fans, you. `}
-          <span className="font-normal text-gray-800">{`You're now rocking with B00ST ads!`}</span>
+          <span className="font-normal text-gray-800">{`You're now rocking with your ad campaign!`}</span>
         </span>
       </p>
       <p className="font-leading mt-10 w-full">
@@ -146,7 +147,7 @@ export function BButton({
   open: boolean;
   words: Array<string>;
 }) {
-  let [isOpen, setIsOpen] = useState(open ? true : false);
+  let [isOpen, setIsOpen] = useState(false);
   let [isSubmitted, setIsSubmitted] = useState(false);
   let [isSubmitting, setIsSubmitting] = useState(false);
   let [fileImage, setFileImage] = useState(undefined);
@@ -241,7 +242,7 @@ export function BButton({
     <div className="animate-ring rounded-md">
       <button
         onClick={() => {
-          setIsOpen(!open);
+          setIsOpen(!isOpen);
           setIsSubmitted(false);
         }}
         className={mainButtonClassName()}
@@ -258,7 +259,7 @@ export function BButton({
                 static
                 className="fixed z-10 inset-0 overflow-y-auto"
                 open={isOpen}
-                onClose={setIsOpen}
+                onClose={() => setIsOpen(!isOpen)}
               >
                 <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
                   <Transition.Child
