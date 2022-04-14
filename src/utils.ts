@@ -1,8 +1,4 @@
 /* eslint-disable no-unused-vars */
-
-// import { useRef, useState, useEffect, MutableRefObject } from 'react';
-import React from 'react';
-
 import { IMAGE_EXTENSIONS, VIDEO_EXTENSIONS } from './constants';
 
 /**
