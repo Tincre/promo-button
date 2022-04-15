@@ -42,14 +42,15 @@
   "size-limit": [
     {
       "path": "dist/promo-button.cjs.production.min.js",
-      "limit": "10 KB"
+      "limit": "100 KB"
     },
     {
       "path": "dist/promo-button.esm.js",
-      "limit": "10 KB"
+      "limit": "100 KB"
     }
   ],
   "devDependencies": {
+    "@react-icons/all-files": "^4.1.0",
     "@size-limit/preset-small-lib": "^7.0.8",
     "@tailwindcss/forms": "^0.5.0",
     "@testing-library/react": "^13.0.1",
@@ -74,7 +75,6 @@
   },
   "dependencies": {
     "@headlessui/react": "^0.0.0-insiders.fbfc86f",
-    "eslint": "^8.13.0",
-    "react-icons": "^4.3.1"
+    "eslint": "^8.13.0"
   }
 }
