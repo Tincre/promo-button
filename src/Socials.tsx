@@ -1,16 +1,13 @@
-import {
-  FaFacebook,
-  FaTwitter,
-  FaLinkedin,
-  FaGithub,
-  FaInstagram,
-  FaSpotify,
-  FaSnapchatSquare,
-  FaApple,
-  FaYoutubeSquare,
-  FaInternetExplorer,
-} from 'react-icons/fa'; // https://github.com/react-icons/react-icons/issues/154
-
+import { FaFacebook } from '@react-icons/all-files/fa/FaFacebook';
+import { FaTwitter } from '@react-icons/all-files/fa/FaTwitter';
+import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin';
+import { FaGithub } from '@react-icons/all-files/fa/FaGithub';
+import { FaInstagram } from '@react-icons/all-files/fa/FaInstagram';
+import { FaSpotify } from '@react-icons/all-files/fa/FaSpotify';
+import { FaSnapchatSquare } from '@react-icons/all-files/fa/FaSnapchatSquare';
+import { FaApple } from '@react-icons/all-files/fa/FaApple';
+import { FaYoutubeSquare } from '@react-icons/all-files/fa/FaYoutubeSquare';
+import { FaInternetExplorer } from '@react-icons/all-files/fa/FaInternetExplorer';
 function resolveTargetLink(targetLink: string) {
   const magicNumber = 8;
   if (targetLink?.includes('spotify')) return 'Spotify';
