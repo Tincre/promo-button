@@ -18,7 +18,13 @@ function showWidget(setFileImage: any) {
       }
     }
   );
-  widget.open();
+  document?.getElementById('cloudinary-upload-widget')?.addEventListener(
+    'click',
+    function () {
+      widget.open();
+    },
+    true
+  );
 }
 
 export default function Cloudinary({
@@ -33,12 +39,6 @@ export default function Cloudinary({
   // TODO render <video> or <img> as appropriate
   return (
     <>
-      <script
-        src="https://upload-widget.cloudinary.com/global/all.js"
-        type="text/javascript"
-        async
-      ></script>
-
       <div className="mt-3" id="cloudinary-upload-widget">
         <label
           htmlFor="cloudinary-upload-widget"
