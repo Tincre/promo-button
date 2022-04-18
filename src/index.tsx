@@ -8,6 +8,7 @@ import { Fragment, useState, useRef } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { XIcon } from './icons';
 import ThreeWords from './ThreeWords';
+import { useScript } from './lib/useScript';
 
 const Cloudinary = React.lazy(() => import('./Cloudinary'));
 export function HowItWorks() {
@@ -154,6 +155,8 @@ export function BButton({
   let [imageUploadError, setImageUploadError] = useState(false);
   let [targetLinkError, setTargetLinkError] = useState(false);
   let artistNameInputRef = useRef(null);
+  useScript('https://widget.cloudinary.com/v2.0/global/all.js');
+
   let mainButtonStyle: any = null;
   if (typeof shape !== 'undefined') {
     if (
