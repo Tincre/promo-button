@@ -1,6 +1,5 @@
 import { detectMediaType } from './utils';
-
-function showWidget(setFileImage: any) {
+function getWidget(setFileImage: any) {
   if (typeof window.cloudinary === 'undefined') return null;
   let widget = window.cloudinary.createUploadWidget(
     {
@@ -18,13 +17,11 @@ function showWidget(setFileImage: any) {
       }
     }
   );
-  document?.getElementById('cloudinary-upload-widget')?.addEventListener(
-    'click',
-    function () {
-      widget.open();
-    },
-    true
-  );
+  return widget;
+}
+function showWidget(widget: any) {
+  if (typeof window.cloudinary === 'undefined') return null;
+  widget.open();
 }
 
 export default function Cloudinary({
@@ -37,6 +34,7 @@ export default function Cloudinary({
   // TODO add func input for alt text (should take copy generated for ad)
   const mediaUrlType = detectMediaType(imageData?.secure_url);
   // TODO render <video> or <img> as appropriate
+  let widget = getWidget(setFileImage);
   return (
     <>
       <div className="mt-3" id="cloudinary-upload-widget">
@@ -51,13 +49,13 @@ export default function Cloudinary({
             type="button"
             id="cloudinary-upload-widget"
             className="inline-flex justify-center w-full rounded-md border border-black shadow-sm px-4 py-2 bg-gray-50 text-base font-medium text-black hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700 hover:text-gray-900 sm:text-sm"
-            onClick={() => showWidget(setFileImage)}
+            onClick={() => showWidget(widget)}
           >
             Ad creative upload tool
           </button>
         ) : (
           <div className="text-center px-4 py-4">
-            <button type="button" onClick={() => showWidget(setFileImage)}>
+            <button type="button" onClick={() => showWidget(widget)}>
               {!!mediaUrlType && mediaUrlType === 'image' ? (
                 <img
                   className="rounded-md max-h-48"
