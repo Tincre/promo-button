@@ -1,4 +1,5 @@
 import { detectMediaType } from './utils';
+
 function getWidget(setFileImage: any) {
   if (typeof window.cloudinary === 'undefined') return null;
   let widget = window.cloudinary.createUploadWidget(
@@ -60,7 +61,7 @@ export default function Cloudinary({
                 <img
                   className="rounded-md max-h-48"
                   src={imageData.secure_url}
-                  alt="uploaded b00st.com ad campaign static media"
+                  alt="uploaded promo ad campaign static media"
                 />
               ) : !!mediaUrlType && mediaUrlType === 'video' ? (
                 <video
