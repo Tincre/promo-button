@@ -16,6 +16,13 @@ function validateUrl(value: string) {
     return `https://${value}`;
   }
 }
+
+/**
+ * @description
+ * The ad target link input component. Input is required by the user.
+ *
+ * > Refer to this input by its id `target`.
+ */
 export default function TextInput() {
   let [targetLink, setTargetLink] = useState<string | null | undefined>(null);
   let [socialsData, setSocialsData] = useState<any>({
