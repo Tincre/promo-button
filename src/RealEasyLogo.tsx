@@ -38,9 +38,9 @@ export default function RealEasyLogo({
   href,
   alt,
 }: {
-  src: string;
-  href: string;
-  alt: string;
+  src: string | undefined;
+  href: string | undefined;
+  alt: string | undefined;
 }) {
   const defaultSrc: string =
     src ||
