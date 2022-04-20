@@ -49,7 +49,7 @@ export default function Cloudinary({
           <button
             type="button"
             id="cloudinary-upload-widget"
-            className="inline-flex justify-center w-full rounded-md border border-black shadow-sm px-4 py-2 bg-gray-50 text-base font-medium text-black hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700 hover:text-gray-900 sm:text-sm"
+            className="inline-flex justify-center w-full rounded-md border border-black shadow-sm px-4 py-2 bg-gray-50 text-base font-medium text-black hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700 hover:text-gray-900 focus:border-transparent sm:text-sm"
             onClick={() => showWidget(widget)}
           >
             Ad creative upload tool
