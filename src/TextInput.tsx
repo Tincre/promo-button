@@ -43,7 +43,7 @@ export default function TextInput() {
           type="url"
           name="target"
           id="target"
-          className="block w-full sm:text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700 border-black focus:ring-border-black rounded-md"
+          className="block w-full sm:text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700 border-black focus:ring-border-black focus:border-transparent rounded-md"
           placeholder="https://youtube.com/watch?v=GS2Y_CkaXP0"
           formNoValidate
           onBlur={(event) => {
