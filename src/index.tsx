@@ -375,12 +375,6 @@ export function BButton({
                           <HowItWorks />
                         )}
                       </div>
-                      <div className="mt-2 sm:mt-3">
-                        <TeamEmail
-                          isSubmitted={isSubmitted}
-                          isSubmitting={isSubmitting}
-                        />
-                      </div>
                     </form>
                   </Transition.Child>
                 </div>

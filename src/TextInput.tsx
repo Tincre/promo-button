@@ -16,7 +16,16 @@ function validateUrl(value: string) {
     return `https://${value}`;
   }
 }
-export default function TextInput() {
+
+/**
+ * @description
+ * The ad target link input component. Input is required by the user.
+ *
+ * > Refer to this input by its id `target`.
+ *
+ * @param placeholder - the placeholder text for the HTML input tag.
+ */
+export default function TextInput({ placeholder }: { placeholder?: string }) {
   let [targetLink, setTargetLink] = useState<string | null | undefined>(null);
   let [socialsData, setSocialsData] = useState<any>({
     socials: {
@@ -43,8 +52,10 @@ export default function TextInput() {
           type="url"
           name="target"
           id="target"
-          className="block w-full sm:text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700 border-black focus:ring-border-black rounded-md"
-          placeholder="https://youtube.com/watch?v=GS2Y_CkaXP0"
+          className="block w-full sm:text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700 border-black focus:ring-border-black focus:border-transparent rounded-md"
+          placeholder={
+            placeholder || 'https://www.youtube.com/watch?v=KfL1VCv2kCI'
+          }
           formNoValidate
           onBlur={(event) => {
             event.preventDefault();

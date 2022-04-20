@@ -1,9 +1,15 @@
-export default function NameInput() {
+/**
+ * @description The ad title input component. Refer to this input via the id `name`, if needed.
+ * This input is required.
+ *
+ * @param placeholder - the placeholder text for the HTML input tag.
+ */
+export default function NameInput({ placeholder }: { placeholder?: string }) {
   return (
     <div className="mt-0">
       <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-        Artist name{' '}
-        <span className="text-xs italic text-muted">{`as you'd like it to appear in your ads`}</span>
+        Ad title{' '}
+        <span className="text-xs italic text-muted">{`as you'd like it to display on your ads`}</span>
       </label>
       <div className="mt-1 rounded-md shadow-sm">
         <input
@@ -11,7 +17,7 @@ export default function NameInput() {
           name="name"
           id="name"
           className="block w-full sm:text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700 border-black focus:ring-border-black focus:border-transparent rounded-md"
-          placeholder="Beyoncé"
+          placeholder={placeholder || `The Kool-Aid Man`}
           required
         />
       </div>
