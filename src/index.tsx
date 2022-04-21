@@ -135,17 +135,15 @@ export function CloseButtonXIcon({ onClose }: { onClose: any }) {
   );
 }
 
-export function BButton({
+export function PromoButton({
   logoSrc,
   user,
   shape,
-  open,
   words,
 }: {
   logoSrc: string;
   user: any;
   shape: string;
-  open: boolean;
   words: Array<string>;
 }) {
   let [isOpen, setIsOpen] = useState(false);
