@@ -1,6 +1,6 @@
 import * as ReactDOM from 'react-dom';
 import 'react-app-polyfill/ie11';
-import { BButton } from '../.';
+import { PromoButton } from '../.';
 import '../dist/promo-button.cjs.development.css';
 
 const App = () => {
@@ -9,7 +9,7 @@ const App = () => {
       <h1 style={{ marginTop: '10px', marginBottom: '10px' }}>
         Promo button demo
       </h1>
-      <BButton
+      <PromoButton
         logoSrc=""
         user={undefined}
         open={false}

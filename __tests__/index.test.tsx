@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { BButton } from '../.';
+import { PromoButton } from '../.';
 
 jest.mock('@headlessui/react', () => ({
   Transition: ({ children, show }: { children: any; show: any }) => (
@@ -21,10 +21,9 @@ describe('promo-button ', () => {
   it('renders', () => {
     function Example() {
       return (
-        <BButton
+        <PromoButton
           logoSrc=""
           user={undefined}
-          open={false}
           words={['Real', 'Easy', 'Ads']}
           shape="square"
         />
