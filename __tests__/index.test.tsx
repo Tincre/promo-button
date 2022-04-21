@@ -24,7 +24,6 @@ describe('promo-button ', () => {
         <PromoButton
           logoSrc=""
           user={undefined}
-          open={false}
           words={['Real', 'Easy', 'Ads']}
           shape="square"
         />
