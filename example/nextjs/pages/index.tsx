@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
+//import {PromoButton} from '../../../.';
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +17,51 @@ const Home: NextPage = () => {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
+        <div style={{ textAlign: 'center', marginTop: '20px' }}>
+          <h1 style={{ marginTop: '10px', marginBottom: '10px' }}>
+            Promo button demo
+          </h1>
+          {/*<PromoButton
+            logoSrc=""
+            user={undefined}
+            open={false}
+            words={['Real', 'Easy', 'Ads']}
+            shape="square"
+            />*/}
+          <p style={{ marginTop: '20px', marginBottom: '10px' }}>
+            <code>npm install @tincre/promo-button</code>
+          </p>
+          <p
+            style={{
+              marginTop: '20px',
+              marginBottom: '10px',
+              fontWeight: 'bold',
+            }}
+          >
+            <a
+              target="_blank"
+              rel="noreferrer noopener"
+              href="https://tincre.dev/docs"
+            >
+              Read the docs
+            </a>
+          </p>
+          <p
+            style={{
+              marginTop: '20px',
+              marginBottom: '10px',
+              fontWeight: 'bold',
+            }}
+          >
+            <a
+              target="_blank"
+              rel="noreferrer noopener"
+              href="https://community.tincre.dev/c/promo-api"
+            >
+              Abuse your community
+            </a>
+          </p>
+        </div>
 
         <p className={styles.description}>
           Get started by editing{' '}
