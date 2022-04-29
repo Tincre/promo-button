@@ -1,7 +1,7 @@
 import * as ReactDOM from 'react-dom';
 import 'react-app-polyfill/ie11';
-import { PromoButton } from '../.';
-import '../dist/promo-button.cjs.development.css';
+import { PromoButton } from '../../.';
+import '../../dist/promo-button.cjs.development.css';
 
 const App = () => {
   return (
@@ -12,7 +12,6 @@ const App = () => {
       <PromoButton
         logoSrc=""
         user={undefined}
-        open={false}
         words={['Real', 'Easy', 'Ads']}
         shape="square"
       />
