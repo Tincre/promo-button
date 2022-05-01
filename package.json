@@ -1,6 +1,6 @@
 {
   "name": "promo-button",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "license": "MIT",
   "author": "Jason R. Stevens, CFA",
   "main": "dist/index.js",
