@@ -1,6 +1,7 @@
 {
   "name": "promo-button",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "scope": "@tincre/promo-button",
   "license": "MIT",
   "author": "Jason R. Stevens, CFA",
   "main": "dist/index.js",
@@ -73,7 +74,6 @@
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.4",
     "identity-obj-proxy": "^3.0.0",
-    "np": "^7.6.1",
     "postcss": "^8.4.12",
     "prettier": "^2.6.2",
     "react": "~17",
