@@ -88,6 +88,11 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@tincre/promo-button@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@tincre/promo-button/-/promo-button-0.0.1.tgz#b4e38aa0413494240e8630a1d47ab375b1a4f562"
+  integrity sha512-7hi0jjq1E0hX1GvK/0ryJeuzBkeb0aI5PUjivLTrJ7MQ7tJIqVqT1kQYBsWcm9weB/T7eI1xveW4eTRiLTBYug==
+
 "@types/node@^17.0.25":
   version "17.0.25"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.25.tgz#527051f3c2f77aa52e5dc74e45a3da5fb2301448"
