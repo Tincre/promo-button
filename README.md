@@ -21,3 +21,33 @@ yarn add @tincre/promo-button # -D if you want this as a dev dep
 ```
 npm install @tincre/promo-button # --save-dev if you want it as a dev dep
 ```
+
+### Development 
+
+#### Releases 
+
+We use [`npm`](https://npmjs.com) for releases. In particular, we use
+`npm --publish` to get the job done.
+
+Currently, only @thinkjrs has the ability to release. The following section 
+is written for memory.
+
+##### Release prep
+
+Prior to using `npm --publish` a release tag needs to be created for
+the library using our standard tagging practices. 
+
+> Ensure that tests :white_check_mark: pass during this process prior to
+releasing via npm.
+
+##### Test release 
+
+To do a proper release, ensure you're in the base repo directory and run 
+`npm publish . --access public --dry-run`.
+
+##### Release `latest` tag
+
+To complete a full release to the `latest` npm `dist-tag`, ensure you're in
+the base repo directory and run `npm publish . --access public`. 
+
+:tada: That's it! :tada:
