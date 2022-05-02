@@ -1,4 +1,4 @@
-import './index.css';
+import './default.css';
 import React, { Suspense } from 'react';
 import RealEasyLogo from './RealEasyLogo';
 import RangeInput from './RangeInput';
