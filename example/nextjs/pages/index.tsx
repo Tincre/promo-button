@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
-//import {PromoButton} from '../../../.';
+import { PromoButton } from '@tincre/promo-button';
 
 const Home: NextPage = () => {
   return (
@@ -21,13 +21,12 @@ const Home: NextPage = () => {
           <h1 style={{ marginTop: '10px', marginBottom: '10px' }}>
             Promo button demo
           </h1>
-          {/*<PromoButton
+          <PromoButton
             logoSrc=""
             user={undefined}
-            open={false}
             words={['Real', 'Easy', 'Ads']}
             shape="square"
-            />*/}
+          />
           <p style={{ marginTop: '20px', marginBottom: '10px' }}>
             <code>npm install @tincre/promo-button</code>
           </p>
