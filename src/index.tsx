@@ -9,6 +9,7 @@ import { Dialog, Transition } from '@headlessui/react';
 import { XIcon } from './icons';
 import ThreeWords from './ThreeWords';
 import { useScript } from './lib/useScript';
+import { getToken } from './lib/getToken';
 
 const Cloudinary = React.lazy(() => import('./Cloudinary'));
 export function HowItWorks() {
@@ -384,3 +385,5 @@ export function PromoButton({
     </div>
   );
 }
+
+export { getToken };
