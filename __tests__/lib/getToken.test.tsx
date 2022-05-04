@@ -1,6 +1,6 @@
 import { getToken } from '../../.';
 import { generateAccessToken } from '../test-utils';
-jest.setTimeout(20000);
+jest.setTimeout(40000);
 
 describe('getToken', () => {
   const clientSecret = 'qK2FXA-hnuASPSFMNTQnQu3xdszaCeLlQ3rawYeliWr5SzGP'; // never do this in your client side js but this is safe due to it being a testing application alone
