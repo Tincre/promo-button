@@ -25,9 +25,9 @@ export function HowItWorks({
       <p className="font-leading mt-10 w-full">
         <span className="font-bold text-xl">1. </span>
         <span className="font-medium text-sm">
-          Your ads are optimizing. Check your email for the invoice.{' '}
+          Your ads are optimizing. Check your email for the invoice link.{' '}
           <span className="font-normal text-gray-800">
-            Once paid, your campaign will be serving fans ads.
+            Once paid, your campaign will be serving ads.
           </span>
         </span>
       </p>
