@@ -26,6 +26,7 @@ describe('promo-button ', () => {
           user={undefined}
           words={['Real', 'Easy', 'Ads']}
           shape="square"
+          email="jason@tincre.com"
         />
       );
     }
