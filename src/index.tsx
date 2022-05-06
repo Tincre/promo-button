@@ -148,11 +148,13 @@ export function PromoButton({
   user,
   shape,
   words,
+  email,
 }: {
   logoSrc: string;
   user: any;
   shape: string;
   words: Array<string>;
+  email: string;
 }) {
   let [isOpen, setIsOpen] = useState(false);
   let [isSubmitted, setIsSubmitted] = useState(false);
@@ -216,7 +218,7 @@ export function PromoButton({
       const data = {
         target: event.target.target.value,
         budget: event.target.budget.value,
-        email: user.email,
+        email: email,
         file: fileImage,
         name: event.target.name.value,
       };
