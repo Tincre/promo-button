@@ -12,15 +12,22 @@ import { useScript } from './lib/useScript';
 import { getToken } from './lib/getToken';
 
 const Cloudinary = React.lazy(() => import('./Cloudinary'));
-export function HowItWorks() {
+
+export function HowItWorks({
+  communityLink,
+  docsLink,
+}: {
+  communityLink?: string;
+  docsLink?: string;
+}) {
   return (
     <div id="how-it-works-post-campaign-submission" className="">
       <p className="font-leading mt-10 w-full">
         <span className="font-bold text-xl">1. </span>
         <span className="font-medium text-sm">
-          Your ads are optimizing. Check your email for the invoice.{' '}
+          Your ads are optimizing. Check your email for the invoice link.{' '}
           <span className="font-normal text-gray-800">
-            Once paid, your campaign will be serving fans ads.
+            Once paid, your campaign will be serving ads.
           </span>
         </span>
       </p>
@@ -43,7 +50,7 @@ export function HowItWorks() {
         <span className="font-medium text-xs">
           Check out our{' '}
           <a
-            href="https://docs.musicfox.io/b00st"
+            href={docsLink || 'https://community.tincre.dev'}
             target="_blank"
             rel="noopener noreferrer"
             className="font-bold text-black hover:underline hover:text-red-700 active:text-red-700"
@@ -52,12 +59,12 @@ export function HowItWorks() {
           </a>{' '}
           or join our{' '}
           <a
-            href="https://discord.gg/TTAHyZkUYQ"
+            href={communityLink || 'https://community.tincre.dev'}
             className="font-bold text-black hover:underline hover:text-red-700 active:text-red-700"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Discord Community
+            Community
           </a>
           .
         </span>
@@ -107,7 +114,7 @@ export function ImageUploadError() {
   return (
     <div>
       <p className="text-sm font-medium italic text-red-700 mb-2">
-        Please upload an image or video in order to run your B00ST campaign!
+        Please upload an image or video in order to run your campaign.
       </p>
     </div>
   );
@@ -141,11 +148,13 @@ export function PromoButton({
   user,
   shape,
   words,
+  email,
 }: {
   logoSrc: string;
   user: any;
   shape: string;
   words: Array<string>;
+  email: string;
 }) {
   let [isOpen, setIsOpen] = useState(false);
   let [isSubmitted, setIsSubmitted] = useState(false);
@@ -209,7 +218,7 @@ export function PromoButton({
       const data = {
         target: event.target.target.value,
         budget: event.target.budget.value,
-        email: user.email,
+        email: email,
         file: fileImage,
         name: event.target.name.value,
       };
