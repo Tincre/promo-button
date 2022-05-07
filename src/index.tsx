@@ -222,7 +222,7 @@ export function PromoButton({
         creative_uri: [fileImage],
         asset_title: event.target.name.value,
       };
-      const response = await fetch(promoApiUrl, {
+      const response = await fetch(promoApiUrl + '/campaigns', {
         body: JSON.stringify(data),
         headers: {
           'Content-Type': 'application/json',
