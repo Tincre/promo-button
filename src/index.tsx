@@ -151,7 +151,6 @@ export function PromoButton({
   backend,
 }: {
   logoSrc: string;
-  user: any;
   shape: string;
   words: Array<string>;
   email: string;
