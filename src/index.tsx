@@ -145,16 +145,16 @@ export function CloseButtonXIcon({ onClose }: { onClose: any }) {
 
 export function PromoButton({
   logoSrc,
-  user,
   shape,
   words,
   email,
+  backend,
 }: {
   logoSrc: string;
-  user: any;
   shape: string;
   words: Array<string>;
   email: string;
+  backend: string;
 }) {
   let [isOpen, setIsOpen] = useState(false);
   let [isSubmitted, setIsSubmitted] = useState(false);
@@ -164,7 +164,6 @@ export function PromoButton({
   let [targetLinkError, setTargetLinkError] = useState(false);
   let artistNameInputRef = useRef(null);
   useScript('https://widget.cloudinary.com/v2.0/global/all.js');
-
   let mainButtonStyle: any = null;
   if (typeof shape !== 'undefined') {
     if (
@@ -216,13 +215,13 @@ export function PromoButton({
       }
       if (targetLinkError) setTargetLinkError(false);
       const data = {
-        target: event.target.target.value,
+        target_link: event.target.target.value,
         budget: event.target.budget.value,
         email: email,
-        file: fileImage,
-        name: event.target.name.value,
+        creative_uri: [fileImage],
+        asset_title: event.target.name.value,
       };
-      const response = await fetch('/api/submit-campaign', {
+      const response = await fetch(backend, {
         body: JSON.stringify(data),
         headers: {
           'Content-Type': 'application/json',

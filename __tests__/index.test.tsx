@@ -23,10 +23,10 @@ describe('promo-button ', () => {
       return (
         <PromoButton
           logoSrc=""
-          user={undefined}
           words={['Real', 'Easy', 'Ads']}
           shape="square"
           email="jason@tincre.com"
+          backend="test-backend"
         />
       );
     }
