@@ -1,7 +1,7 @@
 {
   "name": "@tincre/promo-button",
   "version": "0.0.2",
-  "scope": "@tincre/promo-button",
+  "scope": "@tincre",
   "license": "MIT",
   "author": "Jason R. Stevens, CFA",
   "main": "dist/index.js",
