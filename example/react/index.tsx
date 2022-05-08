@@ -15,6 +15,7 @@ const App = () => {
         words={['Real', 'Easy', 'Ads']}
         shape="square"
         email="jason@tincre.com"
+        backend="my-backend-route"
       />
       <p style={{ marginTop: '20px', marginBottom: '10px' }}>
         <code>npm install @tincre/promo-button</code>
@@ -38,7 +39,7 @@ const App = () => {
           rel="noreferrer noopener"
           href="https://community.tincre.dev/c/promo-api"
         >
-          Abuse your community
+          Community
         </a>
       </p>
     </div>
