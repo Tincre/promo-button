@@ -23,10 +23,10 @@ const Home: NextPage = () => {
           </h1>
           <PromoButton
             logoSrc=""
-            user={undefined}
             words={['Real', 'Easy', 'Ads']}
             shape="square"
             email="jason@tincre.com"
+            backend="/api/promo"
           />
           <p style={{ marginTop: '20px', marginBottom: '10px' }}>
             <code>npm install @tincre/promo-button</code>
