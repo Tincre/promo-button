@@ -1,5 +1,4 @@
 const postcss = require('rollup-plugin-postcss');
-const css = require('rollup-plugin-import-css');
 const autoprefixer = require('autoprefixer');
 
 module.exports = {
@@ -12,13 +11,12 @@ module.exports = {
         },
         extensions: ['.css'],
         minimize: true,
-        output: './dist/custom.css',
+        output: './dist/bundle.css',
         inject: false,
-        // only write out CSS for the first bundle (avoids pointless extra files):
-        extract: !!options.writeMeta,
+        // write out CSS for all bundles
+        extract: true,
       })
     );
-    config.plugins.push(css());
     return config;
   },
 };
