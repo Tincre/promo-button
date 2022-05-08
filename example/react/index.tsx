@@ -1,7 +1,7 @@
 import * as ReactDOM from 'react-dom';
 import 'react-app-polyfill/ie11';
 import { PromoButton } from '../../.';
-import '../../dist/promo-button.cjs.development.css';
+import '../../dist/promo-button.esm.css';
 
 const App = () => {
   return (
