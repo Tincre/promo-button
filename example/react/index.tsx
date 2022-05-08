@@ -11,7 +11,6 @@ const App = () => {
       </h1>
       <PromoButton
         logoSrc=""
-        user={undefined}
         words={['Real', 'Easy', 'Ads']}
         shape="square"
         email="jason@tincre.com"
