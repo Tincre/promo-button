@@ -22,6 +22,14 @@ yarn add @tincre/promo-button # -D if you want this as a dev dep
 npm install @tincre/promo-button # --save-dev if you want it as a dev dep
 ```
 
+### License 
+
+This code is free to use for your commercial or personal projects. It is open-source 
+licensed under the [Mozilla Public License 2.0](https://www.mozilla.org/en-US/MPL/2.0/).
+
+You will see various headers throughout the codebase and can reference the license 
+directly via [LICENSE](/LICENSE) herein.
+
 ### Development 
 
 #### Releases 
