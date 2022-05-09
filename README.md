@@ -21,6 +21,110 @@ yarn add @tincre/promo-button # -D if you want this as a dev dep
 ```
 npm install @tincre/promo-button # --save-dev if you want it as a dev dep
 ```
+### Usage
+
+1. Create the frontend component 
+2. Add backend functionality 
+3. Update the `backend` property in your frontend from **1**
+4. Add an environment file, e.g. `.env.local`
+
+#### Frontend
+To get going try throwing the below into your `index.jsx` or `index.tsx` file. 
+
+```jsx 
+import { PromoButton } from '@tincre/promo-button';
+
+<PromoButton
+  logoSrc="path-to-your-logo"
+  words={['Real', 'Easy', 'Ads']} // Change these to your fav!
+  shape="square"
+  email="client-email" // should be updated by your authentication/user session object
+  backend="my-backend-route" // express route or other backend
+/>
+ 
+```
+> ℹ️ Though this is a client-side component library you will need to leverage some
+> type of backend that proxies with the [Promo API](https://tincre.dev/promo/docs/reference). 
+
+#### Backend 
+
+This following example will work out of the box if you use Next.js.
+
+We provide convenience helper methods `generateAccessToken` and `getToken` to help you 
+securely authenticate requests to the [Promo API](https://tincre.dev/promo/docs/reference).
+
+```ts 
+// Promo API route support: https://tincre.dev/docs/reference
+import { generateAccessToken } from '../../lib/promo-node-utils';
+import { getToken } from '../../../../dist/lib/getToken'; //'@tincre/promo-button';
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<Data>
+) {
+  const clientSecret: string = process.env.PROMO_CLIENT_SECRET || '';
+  const appId: string = process.env.PROMO_APP_ID || '';
+  const clientId: string = process.env.PROMO_CLIENT_ID || '';
+  let accessTokenSigned: string = generateAccessToken(
+    'http://localhost:3000', // update w/hostname + base route
+    clientId,
+    appId,
+    clientSecret
+  );
+  let resultToken: string = await getToken(accessTokenSigned);
+  const promoApiUrl = 'https://promo.api.tincre.dev/campaigns';
+  // get data from client
+  const data = req.body;
+  // build request options
+  const promoApiRequestOptions = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${resultToken}`,
+    },
+    body: data,
+  };
+  // send request to tincre.dev Promo API
+  // forward the status value
+  const promoApiResponse = await fetch(promoApiUrl, promoApiRequestOptions);
+  if (promoApiResponse.status === 200) {
+    res.status(200);
+  } else {
+    res.status(promoApiResponse.status);
+  }
+}
+```
+#### Populate the `backend` prop
+Depending on the route and your application populate the initial `backend` prop. You should populate this with the route pointing to the above function, inside your client `PromoButton`. 
+
+#### Environment variables 
+
+You'll need the following environment variables available in Node.js:
+
+- `PROMO_CLIENT_ID`
+- `PROMO_CLIENT_SECRET` 
+- `PROMO_APP_ID`
+- `PROMO_API_KEY` (optional)
+
+These values can be found in the [Tincre.dev Dashboard](https://tincre.dev/dashboard)
+after you're logged in and have created at least one app. 
+
+##### Example `.env.local`
+
+```env 
+PROMO_API_KEY=
+PROMO_CLIENT_ID=
+PROMO_APP_ID=
+PROMO_CLIENT_SECRET=
+```
+
+### Support 
+
+- Documentation: [tincre.dev/docs](https://tincre.dev/docs)
+- Guides and how-tos: [tincre.dev/docs/guides](https://tincre.dev/docs/guides) 
+- Reference docs: [tincre.dev/docs/reference](https://tincre.dev/docs/reference)
+- Community: [community.tincre.dev](https://community.tincre.dev)
 
 ### License 
 
