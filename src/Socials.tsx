@@ -1,3 +1,10 @@
+/* Copyright Tincre (Musicfox, Inc)
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+
 import { FaFacebook } from '@react-icons/all-files/fa/FaFacebook';
 import { FaTwitter } from '@react-icons/all-files/fa/FaTwitter';
 import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin';

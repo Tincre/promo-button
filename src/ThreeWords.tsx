@@ -1,3 +1,10 @@
+/* Copyright Tincre (Musicfox, Inc)
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+
 export function FirstWord({ word, isHero }: { word: string; isHero: any }) {
   return !isHero ? (
     <span className="animate-pulse bg-clip-text text-transparent bg-gradient-to-r from-gray-50 to-gray-300 group-hover:from-gray-700 group-hover:to-gray-900 block">
