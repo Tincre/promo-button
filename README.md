@@ -98,6 +98,15 @@ export default async function handler(
 #### Populate the `backend` prop
 Depending on the route and your application populate the initial `backend` prop. You should populate this with the route pointing to the above function, inside your client `PromoButton`. 
 
+For example, 
+
+```jsx 
+<PromoButton
+  ...
+  backend="/api/promo" // express route or other backend
+/>
+```
+
 #### Environment variables 
 
 You'll need the following environment variables available in Node.js:
@@ -118,6 +127,31 @@ PROMO_CLIENT_ID=
 PROMO_APP_ID=
 PROMO_CLIENT_SECRET=
 ```
+### Example applications 
+
+We have two fully working example applications herein to get you started. See the 
+[example](https://github.com/tincre/promo-button/tree/main/example) directory for 
+code. 
+
+#### React 
+
+See the [React example](https://github.com/tincre/promo-button/tree/main/example/react) 
+for code to get you started if you're rocking a traditional react application. 
+
+Edit `index.tsx` and `index.html` to get started. 
+
+> :warning: Note that the react application demo does not have a backend, currently. See [Express](https://expressjs.com) documentation for a way to do this in Node.js w/your react application.
+
+
+#### Next.js 
+
+See the [Next.js example](https://github.com/tincre/promo-button/tree/main/example/nextjs) for a basic Next.js application with a built-in backend. 
+
+##### Frontend `/pages/`
+For the frontend, edit [pages/index.tsx](https://github.com/tincre/promo-button/tree/main/example/nextjs/pages/index.tsx). 
+
+##### Backend `/pages/api/`
+For the backend, edit [pages/api/promo.ts](https://github.com/tincre/promo-button/tree/main/example/nextjs/pages/api/promo.ts).
 
 ### Support 
 
