@@ -1,9 +1,13 @@
 {
   "name": "@tincre/promo-button",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "scope": "@tincre",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tincre/promo-button.git"
+  },
   "license": "MPL-2.0",
-  "author": "Jason R. Stevens, CFA",
+  "author": "Jason R. Stevens, CFA on behalf of Tincre <jason@tincre.com> (https://tincre.com)",
   "main": "dist/index.js",
   "module": "dist/promo-button.esm.js",
   "typings": "dist/index.d.ts",
@@ -11,6 +15,10 @@
     "dist",
     "src"
   ],
+  "homepage": "https://github.com/Tincre/promo-button#readme",
+  "bugs": {
+    "url": "https://github.com/Tincre/promo-button/issues"
+  },
   "scripts": {
     "analyze": "size-limit --why",
     "build": "dts build",
