@@ -2,6 +2,7 @@ const postcss = require('rollup-plugin-postcss');
 const autoprefixer = require('autoprefixer');
 const svgr = require('@svgr/rollup');
 const url = require('@rollup/plugin-url');
+const image = require('@rollup/plugin-image');
 
 module.exports = {
   rollup(config, options) {
@@ -23,7 +24,7 @@ module.exports = {
       url()
     )
     config.plugins.push(
-      svgr({icon: true})
+      image()
     )
 
     return config;
