@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import facebook from "super-tiny-icons/images/svg/facebook.svg";
+import facebook from 'super-tiny-icons/images/svg/facebook.svg';
 import twitter from 'super-tiny-icons/images/svg/twitter.svg';
 import linkedin from 'super-tiny-icons/images/svg/linkedin.svg';
 import spotify from 'super-tiny-icons/images/svg/spotify.svg';
@@ -35,43 +35,61 @@ export function XIcon({ className }: { className: string }) {
   );
 }
 
-function BaseIcon({src, className, width, height}: {src: string; className: string; width?: string | number | undefined; height?: string | number | undefined}) {
-  return <img src={src} height={height || 25} width={width || 25} className={className} />
+function BaseIcon({
+  src,
+  className,
+  width,
+  height,
+}: {
+  src: string;
+  className: string;
+  width?: string | number | undefined;
+  height?: string | number | undefined;
+  alt?: string | undefined;
+}) {
+  return (
+    <img
+      src={src}
+      height={height || 25}
+      width={width || 25}
+      className={className}
+      alt={alt}
+    />
+  );
 }
-export function FacebookIcon({className, }: {className: string}) {
-  return <BaseIcon src={facebook} className={className} />
-}
-
-export function TwitterIcon({className, }: {className: string}) {
-  return <BaseIcon src={twitter} className={className} />
-}
-
-export function LinkedInIcon({className, }: {className: string}) {
-  return <BaseIcon src={linkedin} className={className} />
-}
-
-
-export function SpotifyIcon({className, }: {className: string}) {
-  return <BaseIcon src={spotify} className={className} />
-}
-export function GithubIcon({className, }: {className: string}) {
-  return <BaseIcon src={github} className={className} />
-}
-export function InstagramIcon({className, }: {className: string}) {
-  return <BaseIcon src={instagram} className={className} />
-}
-export function SnapchatIcon({className, }: {className: string}) {
-  return <BaseIcon src={snapchat} className={className} />
-}
-export function AppleIcon({className, }: {className: string}) {
-  return <BaseIcon src={apple} className={className} />
+export function FacebookIcon({ className }: { className: string }) {
+  return <BaseIcon src={facebook} className={className} alt="Facebook icon" />;
 }
 
-export function YoutubeIcon({className, }: {className: string}) {
-  return <BaseIcon src={youtube} className={className} />
-}
-export function InternetIcon({className, }: {className: string}) {
-  return <BaseIcon src={internet} className={className} />
+export function TwitterIcon({ className }: { className: string }) {
+  return <BaseIcon src={twitter} className={className} alt="Twitter icon" />;
 }
 
+export function LinkedInIcon({ className }: { className: string }) {
+  return <BaseIcon src={linkedin} className={className} alt="LinkedIn icon" />;
+}
 
+export function SpotifyIcon({ className }: { className: string }) {
+  return <BaseIcon src={spotify} className={className} alt="Spotify icon" />;
+}
+export function GithubIcon({ className }: { className: string }) {
+  return <BaseIcon src={github} className={className} alt="Github icon" />;
+}
+export function InstagramIcon({ className }: { className: string }) {
+  return (
+    <BaseIcon src={instagram} className={className} alt="Instagram icon" />
+  );
+}
+export function SnapchatIcon({ className }: { className: string }) {
+  return <BaseIcon src={snapchat} className={className} alt="Snapchat icon" />;
+}
+export function AppleIcon({ className }: { className: string }) {
+  return <BaseIcon src={apple} className={className} alt="Apple icon" />;
+}
+
+export function YoutubeIcon({ className }: { className: string }) {
+  return <BaseIcon src={youtube} className={className} alt="YouTube icon" />;
+}
+export function InternetIcon({ className }: { className: string }) {
+  return <BaseIcon src={internet} className={className} alt="Internet icon" />;
+}
