@@ -42,6 +42,7 @@ export default function TextInput({ placeholder }: { placeholder?: string }) {
       'Web Url': '',
       YouTube: '',
       Apple: '',
+      Twitter: '',
     },
     targetLink: targetLink,
   });
