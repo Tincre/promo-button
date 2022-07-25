@@ -4,7 +4,18 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
-import { FacebookIcon, TwitterIcon, LinkedInIcon, SpotifyIcon, GithubIcon, InstagramIcon, SnapchatIcon, AppleIcon, YoutubeIcon, InternetIcon,} from './icons';
+import {
+  FacebookIcon,
+  TwitterIcon,
+  LinkedInIcon,
+  SpotifyIcon,
+  GithubIcon,
+  InstagramIcon,
+  SnapchatIcon,
+  AppleIcon,
+  YoutubeIcon,
+  InternetIcon,
+} from './icons';
 function resolveTargetLink(targetLink: string) {
   const magicNumber = 8;
   if (targetLink?.includes('spotify')) return 'Spotify';
