@@ -6,16 +6,17 @@
  */
 
 import React from 'react';
-import facebook from 'super-tiny-icons/images/svg/facebook.svg';
-import twitter from 'super-tiny-icons/images/svg/twitter.svg';
-import linkedin from 'super-tiny-icons/images/svg/linkedin.svg';
-import spotify from 'super-tiny-icons/images/svg/spotify.svg';
-import github from 'super-tiny-icons/images/svg/github.svg';
-import instagram from 'super-tiny-icons/images/svg/instagram.svg';
-import snapchat from 'super-tiny-icons/images/svg/snapchat.svg';
-import apple from 'super-tiny-icons/images/svg/apple.svg';
-import youtube from 'super-tiny-icons/images/svg/youtube.svg';
-import internet from 'super-tiny-icons/images/svg/wifi.svg';
+import facebook from './assets/facebook.svg';
+import twitter from './assets/twitter.svg';
+import linkedin from './assets/linkedin.svg';
+import spotify from './assets/spotify.svg';
+import github from './assets/github.svg';
+import instagram from './assets/instagram.svg';
+import snapchat from './assets/snapchat.svg';
+import apple from './assets/apple.svg';
+import youtube from './assets/youtube.svg';
+import internet from './assets/wifi.svg';
+
 export function XIcon({ className }: { className: string }) {
   return (
     <svg
@@ -48,6 +49,7 @@ function BaseIcon({
   height?: string | number | undefined;
   alt?: string | undefined;
 }) {
+  console.log(`BaseIcon: ${src}`);
   return (
     <img
       src={src}
