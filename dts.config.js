@@ -1,5 +1,6 @@
 const postcss = require('rollup-plugin-postcss');
 const autoprefixer = require('autoprefixer');
+const svgr = require('@svgr/rollup');
 
 module.exports = {
   rollup(config, options) {
@@ -16,7 +17,10 @@ module.exports = {
         // write out CSS for all bundles
         extract: true,
       })
-    );
+    )
+    config.plugins.push(
+      svgr()
+    )
     return config;
   },
 };
