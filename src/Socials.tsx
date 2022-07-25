@@ -4,13 +4,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
-
-import { FaFacebook } from '@react-icons/all-files/fa/FaFacebook';
-import { FaTwitter } from '@react-icons/all-files/fa/FaTwitter';
-import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin';
-import { FaGithub } from '@react-icons/all-files/fa/FaGithub';
-import { FaInstagram } from '@react-icons/all-files/fa/FaInstagram';
-import { FaSpotify } from '@react-icons/all-files/fa/FaSpotify';
+import { FacebookIcon, TwitterIcon, LinkedInIcon, SpotifyIcon, GithubIcon, InstagramIcon, SnapchatIcon, AppleIcon, YoutubeIcon, InternetIcon,} from './icons';
 import { FaSnapchatSquare } from '@react-icons/all-files/fa/FaSnapchatSquare';
 import { FaApple } from '@react-icons/all-files/fa/FaApple';
 import { FaYoutubeSquare } from '@react-icons/all-files/fa/FaYoutubeSquare';
@@ -23,6 +17,7 @@ function resolveTargetLink(targetLink: string) {
   if (targetLink?.includes('instagram')) return 'Instagram';
   if (targetLink?.includes('facebook')) return 'Facebook';
   if (targetLink?.includes('apple')) return 'Apple';
+  if (targetLink?.includes('twitter.com')) return 'Twitter';
   if (targetLink?.length > magicNumber) return 'Web Url';
   return targetLink;
 }
@@ -41,63 +36,63 @@ export default function Socials({
   function Icon({ keyName, highlight }: { keyName: string; highlight: any }) {
     if (keyName === 'LinkedIn')
       return highlight ? (
-        <FaLinkedin className={highlightedStyleClass} />
+        <LinkedInIcon className={highlightedStyleClass} />
       ) : (
-        <FaLinkedin className={styleClass} />
+        <LinkedInIcon className={styleClass} />
       );
     if (keyName === 'Twitter')
       return highlight ? (
-        <FaTwitter className={highlightedStyleClass} />
+        <TwitterIcon className={highlightedStyleClass} />
       ) : (
-        <FaTwitter className={styleClass} />
+        <TwitterIcon className={styleClass} />
       );
     if (keyName === 'Facebook')
       return highlight ? (
-        <FaFacebook className={highlightedStyleClass} />
+        <FacebookIcon className={highlightedStyleClass} />
       ) : (
-        <FaFacebook className={styleClass} />
+        <FacebookIcon className={styleClass} />
       );
     if (keyName === 'Github')
       return highlight ? (
-        <FaGithub className={highlightedStyleClass} />
+        <GithubIcon className={highlightedStyleClass} />
       ) : (
-        <FaGithub className={styleClass} />
+        <GithubIcon className={styleClass} />
       );
     if (keyName === 'Instagram')
       return highlight ? (
-        <FaInstagram className={highlightedStyleClass} />
+        <InstagramIcon className={highlightedStyleClass} />
       ) : (
-        <FaInstagram className={styleClass} />
+        <InstagramIcon className={styleClass} />
       );
     if (keyName === 'Spotify')
       return highlight ? (
-        <FaSpotify className={highlightedStyleClass} />
+        <SpotifyIcon className={highlightedStyleClass} />
       ) : (
-        <FaSpotify className={styleClass} />
+        <SpotifyIcon className={styleClass} />
       );
     if (keyName === 'Snapchat')
       return highlight ? (
-        <FaSnapchatSquare className={highlightedStyleClass} />
+        <SnapchatIcon className={highlightedStyleClass} />
       ) : (
-        <FaSnapchatSquare className={styleClass} />
+        <SnapchatIcon className={styleClass} />
       );
     if (keyName === 'Apple')
       return highlight ? (
-        <FaApple className={highlightedStyleClass} />
+        <AppleIcon className={highlightedStyleClass} />
       ) : (
-        <FaApple className={styleClass} />
+        <AppleIcon className={styleClass} />
       );
     if (keyName === 'YouTube')
       return highlight ? (
-        <FaYoutubeSquare className={highlightedStyleClass} />
+        <YoutubeIcon className={highlightedStyleClass} />
       ) : (
-        <FaYoutubeSquare className={styleClass} />
+        <YoutubeIcon className={styleClass} />
       );
     if (keyName === 'Web Url')
       return highlight ? (
-        <FaInternetExplorer className={highlightedStyleClass} />
+        <InternetIcon className={highlightedStyleClass} />
       ) : (
-        <FaInternetExplorer className={styleClass} />
+        <InternetIcon className={styleClass} />
       );
     else return <></>;
   }
