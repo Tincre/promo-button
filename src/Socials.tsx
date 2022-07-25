@@ -5,10 +5,6 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 import { FacebookIcon, TwitterIcon, LinkedInIcon, SpotifyIcon, GithubIcon, InstagramIcon, SnapchatIcon, AppleIcon, YoutubeIcon, InternetIcon,} from './icons';
-import { FaSnapchatSquare } from '@react-icons/all-files/fa/FaSnapchatSquare';
-import { FaApple } from '@react-icons/all-files/fa/FaApple';
-import { FaYoutubeSquare } from '@react-icons/all-files/fa/FaYoutubeSquare';
-import { FaInternetExplorer } from '@react-icons/all-files/fa/FaInternetExplorer';
 function resolveTargetLink(targetLink: string) {
   const magicNumber = 8;
   if (targetLink?.includes('spotify')) return 'Spotify';
