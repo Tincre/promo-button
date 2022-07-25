@@ -49,7 +49,7 @@ function BaseIcon({
   height?: string | number | undefined;
   alt?: string | undefined;
 }) {
-  console.log(`BaseIcon: ${src}`)
+  console.log(`BaseIcon: ${src}`);
   return (
     <img
       src={src}
