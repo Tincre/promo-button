@@ -40,6 +40,7 @@ function BaseIcon({
   className,
   width,
   height,
+  alt,
 }: {
   src: string;
   className: string;
