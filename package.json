@@ -68,8 +68,6 @@
   ],
   "devDependencies": {
     "@headlessui/react": "^1.5.0",
-    "@rollup/plugin-image": "^2.1.1",
-    "@rollup/plugin-url": "^7.0.0",
     "@size-limit/preset-small-lib": "^7.0.8",
     "@tailwindcss/forms": "^0.5.1",
     "@testing-library/react": "~12",
@@ -99,6 +97,7 @@
     "react-dom": "~17",
     "rollup-plugin-import-css": "^3.0.3",
     "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-svg": "^2.0.0",
     "size-limit": "^7.0.8",
     "super-tiny-icons": "^0.4.0",
     "tailwindcss": "^3.0.24",
