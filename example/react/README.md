@@ -1,6 +1,6 @@
-# [promo-button](https://github.com/Tincre/promo-button) Next.js Example
+# [promo-button](https://github.com/Tincre/promo-button) React Example
 
-A no-thrills [Next.js](https://nextjs.org) app to demonstrate use 
+A no-thrills [React](https://reactjs.org) app to demonstrate use 
 of the [Tincre.dev Promo](https://tincre.dev/promo) `PromoButton`
 component crafted to expertly rock algorithmic ads. 
 
@@ -8,7 +8,7 @@ Just plug it in and **_You've got ads!™_**
 
 ## Quick start
 
-Move into the `example/nextjs` directory after 
+Move into the `example/react` directory after 
 cloning the parent repository.
 
 1. Make sure you've cloned this repository. If you haven't, run:
@@ -16,9 +16,9 @@ cloning the parent repository.
 git clone git@github.com:Tincre/promo-button
 ```
 
-2. Move into the `example/nextjs` directory:
+2. Move into the `example/react` directory:
 ```
-cd promo-button/example/nextjs
+cd promo-button/example/react
 ```
 
 3. Install dependencies:
