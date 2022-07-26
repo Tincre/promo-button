@@ -1,34 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# [promo-button](https://github.com/Tincre/promo-button) Next.js Example
 
-## Getting Started
+A no-thrills [Next.js](https://nextjs.org) app to demonstrate use 
+of the [Tincre.dev Promo](https://tincre.dev/promo) `PromoButton`
+component crafted to expertly rock algorithmic ads. 
 
-First, run the development server:
+Just plug it in and **_You've got ads!™_**
 
-```bash
-npm run dev
-# or
-yarn dev
+## Quick start
+
+Move into the `example/nextjs` directory after 
+cloning the parent repository.
+
+1. Make sure you've cloned this repository. If you haven't, run:
+```
+git clone git@github.com:Tincre/promo-button
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Move into the `example/nextjs` directory:
+```
+cd promo-button/example/nextjs
+```
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+3. Install dependencies:
+```
+yarn install # npm install 
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+4. Run the app on `localhost:3000`
+```
+yarn run dev 
+```
+### Support 
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Documentation: [tincre.dev/docs](https://tincre.dev/docs)
+- Guides and how-tos: [tincre.dev/docs/guides](https://tincre.dev/docs/guides) 
+- Reference docs: [tincre.dev/docs/reference](https://tincre.dev/docs/reference)
+- Community: [community.tincre.dev](https://community.tincre.dev)
 
-## Learn More
+### License 
 
-To learn more about Next.js, take a look at the following resources:
+This code is free to use for your commercial or personal projects. It is open-source 
+licensed under the [Mozilla Public License 2.0](https://www.mozilla.org/en-US/MPL/2.0/).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+You will see various headers throughout the codebase and can reference the license 
+directly via [LICENSE](https://github.com/Tincre/promo-button/LICENSE) herein.
