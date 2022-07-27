@@ -97,9 +97,15 @@
     @apply block text-sm font-medium text-gray-700
   }
   .promo-button-range-input {
-    @apply block w-full pl-16 sm:pl-14 sm:text-sm border-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700 text-black focus:ring-border-black hover:border-transparent rounded-md
+    @apply block w-full pl-16 sm:pl-14 sm:text-sm border-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700 text-black hover:border-transparent rounded-md
   }
   .promo-button-range-input-container { 
     @apply mt-1 rounded-md
+  }
+  .promo-button-upload-button {
+    @apply inline-flex justify-center w-full rounded-md border border-black shadow-sm px-4 py-2 bg-gray-50 text-base font-medium text-black hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700 hover:text-gray-900 focus:border-transparent sm:text-sm
+  }
+  .promo-button-upload-button-label {
+    @apply mb-1 block text-sm font-medium text-gray-700
   }
 }
