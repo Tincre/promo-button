@@ -11,9 +11,9 @@ function getWidget(setFileImage: any) {
   if (typeof window.cloudinary === 'undefined') return null;
   let widget = window.cloudinary.createUploadWidget(
     {
-      cloudName: `b00st`,
-      uploadPreset: `uscb5ifq`,
-      folder: 'B00STButton',
+      cloudName: `b00st`, // upload cloudName value
+      uploadPreset: `uscb5ifq`, // TODO Update preseet values
+      folder: 'B00STButton', // TODO folder value
       multiple: true,
     },
     (error: any, result: any) => {
@@ -48,7 +48,7 @@ export default function Cloudinary({
       <div className="mt-3" id="cloudinary-upload-widget">
         <label
           htmlFor="cloudinary-upload-widget"
-          className="mb-1 block text-sm font-medium text-gray-700"
+          className="promo-button-upload-button-label"
         >
           Upload an image or video
         </label>
@@ -56,7 +56,7 @@ export default function Cloudinary({
           <button
             type="button"
             id="cloudinary-upload-widget"
-            className="inline-flex justify-center w-full rounded-md border border-black shadow-sm px-4 py-2 bg-gray-50 text-base font-medium text-black hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700 hover:text-gray-900 focus:border-transparent sm:text-sm"
+            className="promo-button-upload-button"
             onClick={() => showWidget(widget)}
           >
             Ad creative upload tool

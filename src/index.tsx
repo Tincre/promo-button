@@ -10,7 +10,7 @@ import React, { Suspense } from 'react';
 import RealEasyLogo from './RealEasyLogo';
 import RangeInput from './RangeInput';
 import TextInput from './TextInput';
-import NameInput from './NameInput';
+import AdTitleInput from './AdTitleInput';
 import { Fragment, useState, useRef } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { XIcon } from './icons';
@@ -120,7 +120,7 @@ export function TeamEmail({
 export function ImageUploadError() {
   return (
     <div>
-      <p className="text-sm font-medium italic text-red-700 mb-2">
+      <p className="promo-button-image-upload-error">
         Please upload an image or video in order to run your campaign.
       </p>
     </div>
@@ -129,7 +129,7 @@ export function ImageUploadError() {
 export function TargetLinkError() {
   return (
     <div>
-      <p className="text-sm font-medium italic text-red-700 mb-2">
+      <p className="promo-button-target-link-error">
         It appears the submitted link is not a valid url. Please try again.
       </p>
     </div>
@@ -137,14 +137,14 @@ export function TargetLinkError() {
 }
 export function CloseButtonXIcon({ onClose }: { onClose: any }) {
   return (
-    <div className="block absolute top-0 right-0 pt-4 pr-4">
+    <div className="promo-button-close-icon-outer">
       <button
         type="button"
-        className="bg-white rounded-md text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-transparent"
+        className="promo-button-close-icon-inner"
         onClick={() => onClose(false)}
       >
         <span className="sr-only">Close</span>
-        <XIcon className="h-6 w-6" aria-hidden="true" />
+        <XIcon className="promo-button-close-icon-size" aria-hidden="true" />
       </button>
     </div>
   );
@@ -169,21 +169,9 @@ export function PromoButton({
   let [fileImage, setFileImage] = useState(undefined);
   let [imageUploadError, setImageUploadError] = useState(false);
   let [targetLinkError, setTargetLinkError] = useState(false);
-  let artistNameInputRef = useRef(null);
+  let adTitleInputRef = useRef(null);
   useScript('https://widget.cloudinary.com/v2.0/global/all.js');
-  let mainButtonStyle: any = null;
-  if (typeof shape !== 'undefined') {
-    if (
-      shape !== 'square' &&
-      shape !== 'circle' &&
-      shape !== 'plain' &&
-      shape !== 'hero'
-    )
-      return null;
-    mainButtonStyle = shape;
-  } else {
-    mainButtonStyle = 'square';
-  }
+
   let buttonTextArray;
   if (typeof words === 'undefined') {
     buttonTextArray = ['Real', 'Easy', 'Ads!'];
@@ -191,18 +179,10 @@ export function PromoButton({
     buttonTextArray = words;
   }
   const mainButtonClassName = () => {
-    let staticStyle = 'rounded-md';
-    if (mainButtonStyle === 'square') {
-      staticStyle = 'rounded-md';
-    } else if (mainButtonStyle === 'circle') {
-      staticStyle = 'rounded-full';
-    } else if (mainButtonStyle === 'plain') {
-      staticStyle = 'rounded-md py-2 px-6 md:py-3 md:px-6';
-    } else if (mainButtonStyle === 'hero') {
-      return `group inline-block px-24 py-24 uppercase leading-none text-white font-thinner bg-black hover:bg-gray-100 rounded-md shadow`;
+    if (typeof shape !== 'string') {
+      return 'group promo-button-main';
     }
-
-    return `group inline-block min-w-24 min-h-24 px-3 py-2 max-w-48 max-h-48 md:py-3 md:px-3 md:mr-2 uppercase leading-none text-white font-thinner bg-black hover:bg-gray-100 ${staticStyle} shadow`;
+    return `group promo-button-${shape}`;
   };
 
   const submitCampaign = async (event: any) => {
@@ -256,7 +236,7 @@ export function PromoButton({
     }
   };
   return (
-    <div className="animate-ring rounded-md">
+    <div className="rounded-md">
       <button
         onClick={() => {
           setIsOpen(!isOpen);
@@ -264,21 +244,24 @@ export function PromoButton({
         }}
         className={mainButtonClassName()}
       >
-        <span className="mx-auto uppercase italic text-md font-bold subpixel-antialiased my-auto">
+        <span className="promo-button-text">
           <ThreeWords
-            {...{ words: buttonTextArray, isHero: mainButtonStyle === 'hero' }}
+            {...{
+              words: buttonTextArray,
+              isHero: mainButtonClassName() === 'group promo-button-hero',
+            }}
           />
           <div>
             <Transition.Root show={isOpen} as={Fragment}>
               <Dialog
                 as="div"
-                initialFocus={artistNameInputRef}
+                initialFocus={adTitleInputRef}
                 static
-                className="fixed z-10 inset-0 overflow-y-auto"
+                className="promo-button-dialog-outer"
                 open={isOpen}
                 onClose={() => setIsOpen(!isOpen)}
               >
-                <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+                <div className="promo-button-dialog-inner">
                   <Transition.Child
                     as={Fragment}
                     enter="ease-out duration-300"
@@ -288,7 +271,7 @@ export function PromoButton({
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0"
                   >
-                    <Dialog.Overlay className="rounded-md fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+                    <Dialog.Overlay className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
                   </Transition.Child>
 
                   {/* This element is to trick the browser into centering the modal contents. */}
@@ -309,22 +292,20 @@ export function PromoButton({
                   >
                     <form
                       onSubmit={submitCampaign}
-                      className="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6"
+                      className="promo-button-form-container"
                     >
                       <div>
-                        <div className="px-12">
-                          <RealEasyLogo src={logoSrc} />
-                        </div>
+                        <RealEasyLogo src={logoSrc} />
                         <div className="mt-3 text-center sm:mt-5">
                           <Dialog.Title
                             as="h3"
-                            className="text-lg leading-6 font-medium text-gray-900"
+                            className="promo-button-dialog-title-text"
                           >
                             {!isSubmitted ? `Start a campaign` : `Success!`}{' '}
                             <CloseButtonXIcon onClose={setIsOpen} />
                           </Dialog.Title>
                           <div className="mt-2">
-                            <p className="text-sm italic text-gray-500">
+                            <p className="promo-button-dialog-subtitle-text">
                               {!isSubmitted
                                 ? `We need just a few items to start.`
                                 : `Check your email for a link to fund your campaign.`}
@@ -335,7 +316,7 @@ export function PromoButton({
                       <div className="mt-5 sm:mt-6">
                         {!isSubmitted ? (
                           <div>
-                            <NameInput />
+                            <AdTitleInput />
                             <TextInput />
                             <RangeInput />
                             <Suspense fallback={<div>Loading...</div>}>
@@ -353,8 +334,10 @@ export function PromoButton({
                                 type="submit"
                                 disabled={isSubmitting && fileImage}
                                 className={`${
-                                  !isSubmitting ? '' : 'disabled:bg-gray-800'
-                                } inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-700 antialiased text-lg sm:text-md font-bold tracking-wide text-white hover:bg-gray-200 hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700 hover:text-black `}
+                                  !isSubmitting
+                                    ? ''
+                                    : 'promo-button-dialog-submission-button-disabled'
+                                } promo-button-dialog-submission-button`}
                               >
                                 {!isSubmitting ? (
                                   <svg

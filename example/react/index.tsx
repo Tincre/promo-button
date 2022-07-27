@@ -1,7 +1,7 @@
 import * as ReactDOM from 'react-dom';
 import 'react-app-polyfill/ie11';
-import { PromoButton } from '@tincre/promo-button';
-import './node_modules/@tincre/promo-button/dist/promo-button.esm.css'; 
+import { PromoButton } from '../../dist/promo-button.esm.js'//'@tincre/promo-button';
+import '../../dist/promo-button.esm.css'; 
 
 const App = () => {
   return (
@@ -12,7 +12,7 @@ const App = () => {
       <PromoButton
         logoSrc=""
         words={['Real', 'Easy', 'Ads']}
-        shape="square"
+        shape="hero"
         email="jason@tincre.com"
         backend="my-backend-route"
       />

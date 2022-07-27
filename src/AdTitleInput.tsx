@@ -11,19 +11,23 @@
  *
  * @param placeholder - the placeholder text for the HTML input tag.
  */
-export default function NameInput({ placeholder }: { placeholder?: string }) {
+export default function AdTitleInput({
+  placeholder,
+}: {
+  placeholder?: string;
+}) {
   return (
     <div className="mt-0">
-      <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+      <label htmlFor="adTitle" className="promo-button-ad-title-input-label">
         Ad title{' '}
-        <span className="text-xs italic text-muted">{`as you'd like it to display on your ads`}</span>
+        <span className="promo-button-ad-title-input-label-inner">{`as you'd like it to display on your ads`}</span>
       </label>
-      <div className="mt-1 rounded-md shadow-sm">
+      <div className="promo-button-ad-title-input-container">
         <input
           type="text"
-          name="name"
-          id="name"
-          className="block w-full sm:text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700 border-black focus:ring-border-black focus:border-transparent rounded-md"
+          name="adTitle"
+          id="adTitle"
+          className="promo-button-ad-title-input"
           placeholder={placeholder || `The Kool-Aid Man`}
           required
         />
