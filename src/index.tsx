@@ -180,12 +180,9 @@ export function PromoButton({
   }
   const mainButtonClassName = () => {
     if (typeof shape !== 'string') {
-      return 'promo-button-main';
+      return 'group promo-button-main';
     }
-    if (shape !== 'hero') {
-      return `promo-button-${shape}`;
-    }
-    return `group promo-button-hero`;
+    return `group promo-button-${shape}`;
   };
 
   const submitCampaign = async (event: any) => {
