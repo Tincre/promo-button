@@ -51,16 +51,16 @@ export default function TextInput({ placeholder }: { placeholder?: string }) {
     <div className="mt-3">
       <label
         htmlFor="target"
-        className="block text-sm font-medium text-gray-700"
+        className="promo-button-target-link-label"
       >
         Target link for your ads
       </label>
-      <div className="mt-1 relative rounded-md shadow-sm">
+      <div className="promo-button-target-link-input-container">
         <input
           type="url"
           name="target"
           id="target"
-          className="block w-full sm:text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700 border-black focus:ring-border-black focus:border-transparent rounded-md"
+          className="promo-button-target-link-input"
           placeholder={
             placeholder || 'https://www.youtube.com/watch?v=KfL1VCv2kCI'
           }
