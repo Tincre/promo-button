@@ -46,6 +46,8 @@ import { PromoButton } from '@tincre/promo-button';
 > ℹ️ Though this is a client-side component library you will need to leverage some
 > type of backend that proxies with the [Promo API](https://tincre.dev/promo/docs/reference). 
 
+You can [customize styling, too. See below](#custom-css).
+
 #### Backend 
 
 This following example will work out of the box if you use Next.js.
@@ -95,6 +97,102 @@ export default async function handler(
   }
 }
 ```
+#### Custom css 
+
+The Promo Button styling can be easily customized. Each major section has 
+a css class which you can override. 
+
+If using [TailwindCSS](https://tailwindcss.com) you may adjust or override any of the classes below via adding to your 
+global css file: 
+
+```css
+@tailwind base;
+@tailwind components;
+
+@tailwind utilities;
+
+@layer components {
+    .promo-button-my-custom-outer-button-class {
+      @apply px-36 py-2 // whatever tailwind you want
+    }
+}
+```
+
+Furthermore, the color `brand` may be customized to provide a one-shot 
+button color. In your tailwind configuration file: 
+
+```js
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        brand: '#4F46E5',
+      },
+    },
+  },
+}
+```
+##### Main button container
+The following are modifiable by the `shape` prop via the `PromoButton`
+component. For example, if `shape` is `"plain"` then the class selected 
+will be `promo-button-plain`. 
+
+As such, you may add your own `promo-button-<my-name>` class and pass 
+`"my-name"` to the `shape` prop. 
+
+ - `.promo-button-main`
+ - `.promo-button-hero`
+ - `.promo-button-circle`
+ - `.promo-button-plain`
+ - `.promo-button-square`
+
+##### Main dialog containers 
+
+ - `.promo-button-dialog-outer` 
+ - `.promo-button-dialog-inner`
+
+##### Main styling 
+ - `.promo-button-text`
+ - `.promo-button-form-container`
+ - `.promo-button-modal-logo`
+ 
+ - `.promo-button-image-upload-error`
+ - `.promo-button-target-link-error`
+ - `.promo-button-close-icon-outer`
+ - `.promo-button-close-icon-inner`
+ - `.promo-button-close-icon-size`
+
+##### Dialog section styling
+
+###### Title and subtitle
+ - `.promo-button-dialog-title-text`
+ - `.promo-button-dialog-subtitle-text`
+
+###### Ad title input
+ - `.promo-button-ad-title-input-label`
+ - `.promo-button-ad-title-input-label-inner`
+ - `.promo-button-ad-title-input`
+ - `.promo-button-ad-title-input-container`
+
+###### Target link input
+ - `.promo-button-target-link-input`
+ - `.promo-button-target-link-input-container`
+ - `.promo-button-target-link-label`
+
+###### Spend range input 
+ - `.promo-button-range-input-label`
+ - `.promo-button-range-input`
+ - `.promo-button-range-input-container`
+
+###### Asset upload button
+ - `.promo-button-upload-button`
+ - `.promo-button-upload-button-label`
+
+###### Submit campaign button
+ - `.promo-button-dialog-submission-button`
+ - `.promo-button-dialog-submission-button-disabled`
+ 
 #### Populate the `backend` prop
 Depending on the route and your application populate the initial `backend` prop. You should populate this with the route pointing to the above function, inside your client `PromoButton`. 
 
