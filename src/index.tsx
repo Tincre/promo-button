@@ -120,7 +120,7 @@ export function TeamEmail({
 export function ImageUploadError() {
   return (
     <div>
-      <p className="text-sm font-medium italic text-red-700 mb-2">
+      <p className="promo-button-image-upload-error">
         Please upload an image or video in order to run your campaign.
       </p>
     </div>
@@ -129,7 +129,7 @@ export function ImageUploadError() {
 export function TargetLinkError() {
   return (
     <div>
-      <p className="text-sm font-medium italic text-red-700 mb-2">
+      <p className="promo-button-target-link-error">
         It appears the submitted link is not a valid url. Please try again.
       </p>
     </div>
@@ -137,14 +137,14 @@ export function TargetLinkError() {
 }
 export function CloseButtonXIcon({ onClose }: { onClose: any }) {
   return (
-    <div className="block absolute top-0 right-0 pt-4 pr-4">
+    <div className="promo-button-close-icon-outer">
       <button
         type="button"
-        className="bg-white rounded-md text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-transparent"
+        className="promo-button-close-icon-inner"
         onClick={() => onClose(false)}
       >
         <span className="sr-only">Close</span>
-        <XIcon className="h-6 w-6" aria-hidden="true" />
+        <XIcon className="promo-button-close-icon-size" aria-hidden="true" />
       </button>
     </div>
   );

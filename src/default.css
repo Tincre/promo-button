@@ -25,4 +25,22 @@
   .promo-button-square {
     @apply promo-button-main
   }
+
+  .promo-button-image-upload-error {
+    @apply text-sm font-medium italic text-red-700 mb-2
+  }
+
+  .promo-button-target-link-error {
+    @apply text-sm font-medium italic text-red-700 mb-2
+  }
+
+  .promo-button-close-icon-outer {
+    @apply block absolute top-0 right-0 pt-4 pr-4
+  }
+  .promo-button-close-icon-inner {
+    @apply bg-white rounded-md text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-transparent
+  }
+  .promo-button-close-icon-size {
+    @apply h-6 w-6
+  }
 }
