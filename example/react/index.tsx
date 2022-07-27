@@ -12,7 +12,7 @@ const App = () => {
       <PromoButton
         logoSrc=""
         words={['Real', 'Easy', 'Ads']}
-        shape="square"
+        shape="hero"
         email="jason@tincre.com"
         backend="my-backend-route"
       />
