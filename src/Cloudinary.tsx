@@ -11,9 +11,9 @@ function getWidget(setFileImage: any) {
   if (typeof window.cloudinary === 'undefined') return null;
   let widget = window.cloudinary.createUploadWidget(
     {
-      cloudName: `b00st`,
-      uploadPreset: `uscb5ifq`,
-      folder: 'B00STButton',
+      cloudName: `b00st`, // upload cloudName value
+      uploadPreset: `uscb5ifq`, // TODO Update preseet values
+      folder: 'B00STButton', // TODO folder value
       multiple: true,
     },
     (error: any, result: any) => {
