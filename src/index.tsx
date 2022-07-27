@@ -178,13 +178,10 @@ export function PromoButton({
   } else {
     buttonTextArray = words;
   }
-  const mainButtonClassName = () => {
-    if (typeof shape !== 'string') {
-      return 'group promo-button-main';
-    }
-    return `group promo-button-${shape}`;
-  };
-
+  const mainButtonClassName =
+    typeof shape !== 'string'
+      ? 'promo-button-main group'
+      : `promo-button-${shape} group`;
   const submitCampaign = async (event: any) => {
     try {
       event.preventDefault();
@@ -236,19 +233,19 @@ export function PromoButton({
     }
   };
   return (
-    <div className="rounded-md">
+    <div className="">
       <button
         onClick={() => {
           setIsOpen(!isOpen);
           setIsSubmitted(false);
         }}
-        className={mainButtonClassName()}
+        className={mainButtonClassName}
       >
-        <span className="promo-button-text">
+        <div className="promo-button-text">
           <ThreeWords
             {...{
               words: buttonTextArray,
-              isHero: mainButtonClassName() === 'group promo-button-hero',
+              isHero: mainButtonClassName === 'promo-button-hero group',
             }}
           />
           <div>
@@ -378,7 +375,7 @@ export function PromoButton({
               </Dialog>
             </Transition.Root>
           </div>
-        </span>
+        </div>
       </button>
     </div>
   );
