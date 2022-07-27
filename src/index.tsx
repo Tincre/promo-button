@@ -171,19 +171,7 @@ export function PromoButton({
   let [targetLinkError, setTargetLinkError] = useState(false);
   let artistNameInputRef = useRef(null);
   useScript('https://widget.cloudinary.com/v2.0/global/all.js');
-  let mainButtonStyle: any = null;
-  if (typeof shape !== 'undefined') {
-    if (
-      shape !== 'square' &&
-      shape !== 'circle' &&
-      shape !== 'plain' &&
-      shape !== 'hero'
-    )
-      return null;
-    mainButtonStyle = shape;
-  } else {
-    mainButtonStyle = 'square';
-  }
+
   let buttonTextArray;
   if (typeof words === 'undefined') {
     buttonTextArray = ['Real', 'Easy', 'Ads!'];
@@ -191,18 +179,13 @@ export function PromoButton({
     buttonTextArray = words;
   }
   const mainButtonClassName = () => {
-    let staticStyle = 'rounded-md';
-    if (mainButtonStyle === 'square') {
-      staticStyle = 'rounded-md';
-    } else if (mainButtonStyle === 'circle') {
-      staticStyle = 'rounded-full';
-    } else if (mainButtonStyle === 'plain') {
-      staticStyle = 'rounded-md py-2 px-6 md:py-3 md:px-6';
-    } else if (mainButtonStyle === 'hero') {
-      return `group inline-block px-24 py-24 uppercase leading-none text-white font-thinner bg-black hover:bg-gray-100 rounded-md shadow`;
+    if (typeof shape !== 'string') {
+      return 'promo-button-main';
     }
-
-    return `group inline-block min-w-24 min-h-24 px-3 py-2 max-w-48 max-h-48 md:py-3 md:px-3 md:mr-2 uppercase leading-none text-white font-thinner bg-black hover:bg-gray-100 ${staticStyle} shadow`;
+    if (shape !== 'hero') {
+      return `promo-button-${shape}`;
+    }
+    return `group promo-button-hero`;
   };
 
   const submitCampaign = async (event: any) => {
@@ -266,7 +249,10 @@ export function PromoButton({
       >
         <span className="mx-auto uppercase italic text-md font-bold subpixel-antialiased my-auto">
           <ThreeWords
-            {...{ words: buttonTextArray, isHero: mainButtonStyle === 'hero' }}
+            {...{
+              words: buttonTextArray,
+              isHero: mainButtonClassName() === 'group promo-button-hero',
+            }}
           />
           <div>
             <Transition.Root show={isOpen} as={Fragment}>
