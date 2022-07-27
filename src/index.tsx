@@ -236,7 +236,7 @@ export function PromoButton({
     }
   };
   return (
-    <div className="animate-ring rounded-md">
+    <div className="rounded-md">
       <button
         onClick={() => {
           setIsOpen(!isOpen);
