@@ -10,7 +10,7 @@ import React, { Suspense } from 'react';
 import RealEasyLogo from './RealEasyLogo';
 import RangeInput from './RangeInput';
 import TextInput from './TextInput';
-import NameInput from './NameInput';
+import AdTitleInput from './AdTitleInput';
 import { Fragment, useState, useRef } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { XIcon } from './icons';
@@ -169,7 +169,7 @@ export function PromoButton({
   let [fileImage, setFileImage] = useState(undefined);
   let [imageUploadError, setImageUploadError] = useState(false);
   let [targetLinkError, setTargetLinkError] = useState(false);
-  let artistNameInputRef = useRef(null);
+  let adTitleInputRef = useRef(null);
   useScript('https://widget.cloudinary.com/v2.0/global/all.js');
 
   let buttonTextArray;
@@ -255,7 +255,7 @@ export function PromoButton({
             <Transition.Root show={isOpen} as={Fragment}>
               <Dialog
                 as="div"
-                initialFocus={artistNameInputRef}
+                initialFocus={adTitleInputRef}
                 static
                 className="promo-button-dialog-outer"
                 open={isOpen}
@@ -316,7 +316,7 @@ export function PromoButton({
                       <div className="mt-5 sm:mt-6">
                         {!isSubmitted ? (
                           <div>
-                            <NameInput />
+                            <AdTitleInput />
                             <TextInput />
                             <RangeInput />
                             <Suspense fallback={<div>Loading...</div>}>
