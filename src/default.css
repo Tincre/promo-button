@@ -10,6 +10,7 @@
  * class names below.
  */
 @layer components { 
+
   .promo-button-main {
     @apply rounded-md inline-block min-w-[6rem] min-h-[6rem] px-3 py-2 max-w-[12rem] max-h-[12rem] md:py-3 md:px-3 md:mr-2 uppercase leading-none text-white bg-black hover:bg-gray-100 shadow
   }
@@ -27,11 +28,11 @@
   }
 
   .promo-button-image-upload-error {
-    @apply text-sm font-medium italic text-indigo-700 mb-2
+    @apply text-sm font-medium italic text-brand mb-2
   }
 
   .promo-button-target-link-error {
-    @apply text-sm font-medium italic text-indigo-700 mb-2
+    @apply text-sm font-medium italic text-brand mb-2
   }
 
   .promo-button-close-icon-outer {
@@ -66,7 +67,7 @@
     @apply text-sm italic text-gray-500
   }
   .promo-button-dialog-submission-button {
-    @apply inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-700 antialiased text-lg sm:text-base font-bold tracking-wide text-white hover:bg-gray-200 hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 hover:text-black 
+    @apply inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-brand antialiased text-lg sm:text-base font-bold tracking-wide text-white hover:bg-gray-200 hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand hover:text-black 
   }
   .promo-button-dialog-submission-button-disabled {
     @apply disabled:bg-gray-800
@@ -78,13 +79,13 @@
     @apply text-xs italic text-gray-300
   }
   .promo-button-ad-title-input {
-    @apply block w-full sm:text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 border-black focus:border-transparent rounded-md
+    @apply block w-full sm:text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand border-black focus:border-transparent rounded-md
   }
   .promo-button-ad-title-input-container {
     @apply mt-1 rounded-md shadow-sm
   }
   .promo-button-target-link-input {
-    @apply block w-full sm:text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 border-black focus:border-transparent rounded-md
+    @apply block w-full sm:text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand border-black focus:border-transparent rounded-md
   }
   .promo-button-target-link-input-container {
     @apply mt-1 relative rounded-md shadow-sm
@@ -97,13 +98,13 @@
     @apply block text-sm font-medium text-gray-700
   }
   .promo-button-range-input {
-    @apply block w-full pl-16 sm:pl-14 sm:text-sm border-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 text-black hover:border-transparent rounded-md
+    @apply block w-full pl-16 sm:pl-14 sm:text-sm border-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand text-black hover:border-transparent rounded-md
   }
   .promo-button-range-input-container { 
     @apply mt-1 rounded-md
   }
   .promo-button-upload-button {
-    @apply inline-flex justify-center w-full rounded-md border border-black shadow-sm px-4 py-2 bg-gray-50 text-base font-medium text-black hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 hover:text-gray-900 focus:border-transparent sm:text-sm
+    @apply inline-flex justify-center w-full rounded-md border border-black shadow-sm px-4 py-2 bg-gray-50 text-base font-medium text-black hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand hover:text-gray-900 focus:border-transparent sm:text-sm
   }
   .promo-button-upload-button-label {
     @apply mb-1 block text-sm font-medium text-gray-700
