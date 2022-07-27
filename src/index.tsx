@@ -244,7 +244,7 @@ export function PromoButton({
         }}
         className={mainButtonClassName()}
       >
-        <span className="mx-auto uppercase italic text-md font-bold subpixel-antialiased my-auto">
+        <span className="promo-button-text">
           <ThreeWords
             {...{
               words: buttonTextArray,
@@ -292,12 +292,10 @@ export function PromoButton({
                   >
                     <form
                       onSubmit={submitCampaign}
-                      className="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6"
+                      className="promo-button-form-container"
                     >
                       <div>
-                        <div className="px-12">
-                          <RealEasyLogo src={logoSrc} />
-                        </div>
+                        <RealEasyLogo src={logoSrc} />
                         <div className="mt-3 text-center sm:mt-5">
                           <Dialog.Title
                             as="h3"
