@@ -11,7 +11,7 @@
  */
 @layer components { 
   .promo-button-main {
-    @apply rounded-md group inline-block min-w-24 min-h-24 px-3 py-2 max-w-48 max-h-48 md:py-3 md:px-3 md:mr-2 uppercase leading-none text-white font-thinner bg-black hover:bg-gray-100 shadow
+    @apply rounded-md inline-block min-w-[6rem] min-h-[6rem] px-3 py-2 max-w-[12rem] max-h-[12rem] md:py-3 md:px-3 md:mr-2 uppercase leading-none text-white bg-black hover:bg-gray-100 shadow
   }
   .promo-button-hero {
     @apply inline-block px-24 py-24 uppercase leading-none text-white bg-black hover:bg-gray-100 rounded-md shadow
