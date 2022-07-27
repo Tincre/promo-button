@@ -257,11 +257,11 @@ export function PromoButton({
                 as="div"
                 initialFocus={artistNameInputRef}
                 static
-                className="fixed z-10 inset-0 overflow-y-auto"
+                className="promo-button-dialog-outer"
                 open={isOpen}
                 onClose={() => setIsOpen(!isOpen)}
               >
-                <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+                <div className="promo-button-dialog-inner">
                   <Transition.Child
                     as={Fragment}
                     enter="ease-out duration-300"
@@ -271,7 +271,7 @@ export function PromoButton({
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0"
                   >
-                    <Dialog.Overlay className="rounded-md fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+                    <Dialog.Overlay className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
                   </Transition.Child>
 
                   {/* This element is to trick the browser into centering the modal contents. */}
