@@ -50,4 +50,13 @@
   .promo-button-dialog-inner {
     @apply flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0
   }
+  .promo-button-text {
+    @apply mx-auto uppercase italic text-base font-bold subpixel-antialiased my-auto
+  }
+  .promo-button-form-container { 
+    @apply inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6
+  }
+  .promo-button-modal-logo {
+    @apply px-12 my-2 lg:my-5 relative flex justify-center content-center items-center
+  }
 }
