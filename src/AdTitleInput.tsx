@@ -11,7 +11,11 @@
  *
  * @param placeholder - the placeholder text for the HTML input tag.
  */
-export default function AdTitleInput({ placeholder }: { placeholder?: string }) {
+export default function AdTitleInput({
+  placeholder,
+}: {
+  placeholder?: string;
+}) {
   return (
     <div className="mt-0">
       <label htmlFor="adTitle" className="promo-button-ad-title-input-label">

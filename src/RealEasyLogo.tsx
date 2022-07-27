@@ -58,10 +58,7 @@ export default function RealEasyLogo({
     `Run awesome, epic, and cross-platform ads with a button press! Brought to you from Promo by tincre.dev.`;
 
   return (
-    <div
-      className="promo-button-modal-logo"
-      id="promo-modal-logo"
-    >
+    <div className="promo-button-modal-logo" id="promo-modal-logo">
       <div className="inline-flex justify-center items-center content-center text-xl text-red-700 font-semibold">
         <RealEasyImage
           height={40}

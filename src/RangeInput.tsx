@@ -26,10 +26,7 @@ export default function RangeInput({ rangeVal }: { rangeVal?: number }) {
   const maxSpend = 10000;
   return (
     <div className="mt-3">
-      <label
-        htmlFor="budget"
-        className="promo-button-range-input-label"
-      >
+      <label htmlFor="budget" className="promo-button-range-input-label">
         {`Budget: $${rangeval}`}
       </label>
       <div className="promo-button-range-input-container">

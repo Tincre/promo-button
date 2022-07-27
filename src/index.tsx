@@ -334,7 +334,9 @@ export function PromoButton({
                                 type="submit"
                                 disabled={isSubmitting && fileImage}
                                 className={`${
-                                  !isSubmitting ? '' : 'promo-button-dialog-submission-button-disabled'
+                                  !isSubmitting
+                                    ? ''
+                                    : 'promo-button-dialog-submission-button-disabled'
                                 } promo-button-dialog-submission-button`}
                               >
                                 {!isSubmitting ? (
