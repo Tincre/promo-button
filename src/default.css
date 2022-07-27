@@ -59,4 +59,17 @@
   .promo-button-modal-logo {
     @apply px-12 my-2 lg:my-5 relative flex justify-center content-center items-center
   }
+  .promo-button-dialog-title-text {
+    @apply text-lg leading-6 font-medium text-gray-900
+  }
+  .promo-button-dialog-subtitle-text {
+    @apply text-sm italic text-gray-500
+  }
+  .promo-button-dialog-submission-button {
+    @apply inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-700 antialiased text-lg sm:text-md font-bold tracking-wide text-white hover:bg-gray-200 hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700 hover:text-black 
+  }
+  .promo-button-dialog-submission-button-disabled {
+    @apply disabled:bg-gray-800
+  }
+  
 }
