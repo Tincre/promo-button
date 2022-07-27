@@ -299,13 +299,13 @@ export function PromoButton({
                         <div className="mt-3 text-center sm:mt-5">
                           <Dialog.Title
                             as="h3"
-                            className="text-lg leading-6 font-medium text-gray-900"
+                            className="promo-button-dialog-title-text"
                           >
                             {!isSubmitted ? `Start a campaign` : `Success!`}{' '}
                             <CloseButtonXIcon onClose={setIsOpen} />
                           </Dialog.Title>
                           <div className="mt-2">
-                            <p className="text-sm italic text-gray-500">
+                            <p className="promo-button-dialog-subtitle-text">
                               {!isSubmitted
                                 ? `We need just a few items to start.`
                                 : `Check your email for a link to fund your campaign.`}
@@ -334,8 +334,8 @@ export function PromoButton({
                                 type="submit"
                                 disabled={isSubmitting && fileImage}
                                 className={`${
-                                  !isSubmitting ? '' : 'disabled:bg-gray-800'
-                                } inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-700 antialiased text-lg sm:text-md font-bold tracking-wide text-white hover:bg-gray-200 hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700 hover:text-black `}
+                                  !isSubmitting ? '' : 'promo-button-dialog-submission-button-disabled'
+                                } promo-button-dialog-submission-button`}
                               >
                                 {!isSubmitting ? (
                                   <svg
