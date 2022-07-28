@@ -35,13 +35,12 @@ export function XIcon({ className }: { className: string }) {
     </svg>
   );
 }
-export function SpinningCircleIcon({color}: {color?: string | undefined}) {
-  const className = `animate-spin -ml-1 mr-3 h-5 w-5 ${color || 'text-gray-900'}`
+export function SpinningCircleIcon({ color }: { color?: string | undefined }) {
+  const className = `animate-spin -ml-1 mr-3 h-5 w-5 ${
+    color || 'text-gray-900'
+  }`;
   return (
-    <svg
-      className={className}
-      viewBox="0 0 24 24"
-    >
+    <svg className={className} viewBox="0 0 24 24">
       <circle
         className="opacity-25"
         cx="12"
