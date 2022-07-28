@@ -7,41 +7,23 @@
 
 import './default.css';
 import React, { Suspense } from 'react';
-import RealEasyLogo from './RealEasyLogo';
 import RangeInput from './RangeInput';
 import TextInput from './TextInput';
 import AdTitleInput from './AdTitleInput';
 import { Fragment, useState, useRef } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import DialogTitle from './DialogTitle';
-import DialogSubtitle from './DialogSubtitle';
+import DialogHeader from './DialogHeader';
 import ThreeWords from './ThreeWords';
 import { useScript } from './lib/useScript';
 import { getToken } from './lib/getToken';
 import HowItWorks from './HowItWorks';
 import SubmitButton from './SubmitButton';
 //import TeamEmail from './TeamEmail';
-
+import { TargetLinkError, ImageUploadError, } from './Errors'
 const Cloudinary = React.lazy(() => import('./Cloudinary'));
 
-export function ImageUploadError() {
-  return (
-    <div>
-      <p className="promo-button-image-upload-error">
-        Please upload an image or video in order to run your campaign.
-      </p>
-    </div>
-  );
-}
-export function TargetLinkError() {
-  return (
-    <div>
-      <p className="promo-button-target-link-error">
-        It appears the submitted link is not a valid url. Please try again.
-      </p>
-    </div>
-  );
-}
+
+
 export function PromoButton({
   logoSrc,
   shape,
@@ -183,17 +165,8 @@ export function PromoButton({
                       onSubmit={submitCampaign}
                       className="promo-button-form-container"
                     >
-                      <div>
-                        <RealEasyLogo src={logoSrc} />
-                        <div className="mt-3 text-center sm:mt-5">
-                          <DialogTitle
-                            isSubmitted={isSubmitted}
-                            setIsOpen={setIsOpen}
-                          />
-                          <DialogSubtitle isSubmitted={isSubmitted} />
-                        </div>
-                      </div>
-                      <div className="mt-5 sm:mt-6">
+                      <DialogHeader setIsSubmitted={setIsSubmitted} setIsOpen={setIsOpen} logoSrc={logoSrc}/>
+                     <div className="mt-5 sm:mt-6">
                         {!isSubmitted ? (
                           <div>
                             <AdTitleInput />
