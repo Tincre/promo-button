@@ -19,10 +19,8 @@ import { getToken } from './lib/getToken';
 import HowItWorks from './HowItWorks';
 import SubmitButton from './SubmitButton';
 //import TeamEmail from './TeamEmail';
-import { TargetLinkError, ImageUploadError, } from './Errors'
+import { TargetLinkError, ImageUploadError } from './Errors';
 const Cloudinary = React.lazy(() => import('./Cloudinary'));
-
-
 
 export function PromoButton({
   logoSrc,
@@ -165,8 +163,12 @@ export function PromoButton({
                       onSubmit={submitCampaign}
                       className="promo-button-form-container"
                     >
-                      <DialogHeader setIsSubmitted={setIsSubmitted} setIsOpen={setIsOpen} logoSrc={logoSrc}/>
-                     <div className="mt-5 sm:mt-6">
+                      <DialogHeader
+                        isSubmitted={isSubmitted}
+                        setIsOpen={setIsOpen}
+                        logoSrc={logoSrc}
+                      />
+                      <div className="mt-5 sm:mt-6">
                         {!isSubmitted ? (
                           <div>
                             <AdTitleInput />
