@@ -5,7 +5,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import './default.css';
+import './styles/default.css';
 import React, { Suspense } from 'react';
 import RangeInput from './RangeInput';
 import TextInput from './TextInput';
