@@ -15,7 +15,7 @@ import {
   AppleIcon,
   YoutubeIcon,
   InternetIcon,
-} from './icons';
+} from './Icons';
 function resolveTargetLink(targetLink: string) {
   const magicNumber = 8;
   if (targetLink?.includes('spotify')) return 'Spotify';

@@ -1,4 +1,4 @@
-import { XIcon } from './icons';
+import { XIcon } from './Icons';
 import { Dialog } from '@headlessui/react';
 
 export function CloseButtonXIcon({ onClose }: { onClose: any }) {
