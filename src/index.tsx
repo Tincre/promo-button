@@ -13,7 +13,8 @@ import TextInput from './TextInput';
 import AdTitleInput from './AdTitleInput';
 import { Fragment, useState, useRef } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import { XIcon } from './icons';
+import DialogTitle from './DialogTitle';
+import DialogSubtitle from './DialogSubtitle';
 import ThreeWords from './ThreeWords';
 import { useScript } from './lib/useScript';
 import { getToken } from './lib/getToken';
@@ -41,21 +42,6 @@ export function TargetLinkError() {
     </div>
   );
 }
-export function CloseButtonXIcon({ onClose }: { onClose: any }) {
-  return (
-    <div className="promo-button-close-icon-outer">
-      <button
-        type="button"
-        className="promo-button-close-icon-inner"
-        onClick={() => onClose(false)}
-      >
-        <span className="sr-only">Close</span>
-        <XIcon className="promo-button-close-icon-size" aria-hidden="true" />
-      </button>
-    </div>
-  );
-}
-
 export function PromoButton({
   logoSrc,
   shape,
@@ -200,20 +186,11 @@ export function PromoButton({
                       <div>
                         <RealEasyLogo src={logoSrc} />
                         <div className="mt-3 text-center sm:mt-5">
-                          <Dialog.Title
-                            as="h3"
-                            className="promo-button-dialog-title-text"
-                          >
-                            {!isSubmitted ? `Start a campaign` : `Success!`}{' '}
-                            <CloseButtonXIcon onClose={setIsOpen} />
-                          </Dialog.Title>
-                          <div className="mt-2">
-                            <p className="promo-button-dialog-subtitle-text">
-                              {!isSubmitted
-                                ? `We need just a few items to start.`
-                                : `Check your email for a link to fund your campaign.`}
-                            </p>
-                          </div>
+                          <DialogTitle
+                            isSubmitted={isSubmitted}
+                            setIsOpen={setIsOpen}
+                          />
+                          <DialogSubtitle isSubmitted={isSubmitted} />
                         </div>
                       </div>
                       <div className="mt-5 sm:mt-6">
