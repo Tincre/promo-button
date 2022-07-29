@@ -1,6 +1,6 @@
-import DialogTitle from './DialogTitle';
 import DialogSubtitle from './DialogSubtitle';
 import RealEasyLogo from './RealEasyLogo';
+import DialogTitle from './DialogTitle';
 
 export default function DialogHeader({
   isSubmitted,
@@ -15,7 +15,7 @@ export default function DialogHeader({
     <div id="dialog-header">
       <RealEasyLogo src={logoSrc} />
       <div className="promo-mt-3 promo-text-center promo-sm:mt-5">
-        <DialogTitle isSubmitted={isSubmitted} setIsOpen={setIsOpen} />
+        <DialogTitle setIsOpen={setIsOpen} isSubmitted={isSubmitted} />
         <DialogSubtitle isSubmitted={isSubmitted} />
       </div>
     </div>
