@@ -14,7 +14,7 @@ export default function DialogHeader({
   return (
     <div id="dialog-header">
       <RealEasyLogo src={logoSrc} />
-      <div className="mt-3 text-center sm:mt-5">
+      <div className="promo-mt-3 promo-text-center promo-sm:mt-5">
         <DialogTitle isSubmitted={isSubmitted} setIsOpen={setIsOpen} />
         <DialogSubtitle isSubmitted={isSubmitted} />
       </div>
