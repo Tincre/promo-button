@@ -5,19 +5,21 @@ export default function TeamEmail({
   isSubmitted: any;
   isSubmitting: any;
 }) {
-  let buttonStyle = `inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-black text-base font-medium text-white hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700 hover:text-black sm:text-sm`;
+  let buttonStyle = `promo-inline-flex promo-justify-center promo-w-full promo-rounded-md promo-border promo-border-transparent promo-shadow-sm promo-px-4 promo-py-2 promo-bg-black promo-text-base promo-font-medium promo-text-white hover:promo-bg-gray-200 focus:promo-outline-none focus:promo-ring-2 focus:promo-ring-offset-2 focus:promo-ring-red-700 hover:promo-text-black sm:promo-text-sm`;
   return (
     <div>
       {' '}
       {!isSubmitted ? (
         <>
-          <span className="block text-xs italic font-light text-center mb-1">
+          <span className="promo-block promo-text-xs promo-italic promo-font-light promo-text-center promo-mb-1">
             Advanced users
           </span>
           <a
             target="_blank"
             className={
-              !isSubmitting ? buttonStyle : buttonStyle + 'disabled bg-gray-800'
+              !isSubmitting
+                ? buttonStyle
+                : buttonStyle + 'promo-disabled promo-bg-gray-800'
             }
             href={
               'mailto:team@b00st.com?&subject=B00ST%20ad%20campaign&body=Start%20a%20new%20campaign'

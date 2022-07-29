@@ -48,7 +48,7 @@ export default function TextInput({ placeholder }: { placeholder?: string }) {
   });
   let [isChanging, setIsChanging] = useState<boolean | null | undefined>(null);
   return (
-    <div className="mt-3">
+    <div className="promo-mt-3">
       <label htmlFor="target" className="promo-button-target-link-label">
         Target link for your ads
       </label>

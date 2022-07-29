@@ -35,10 +35,10 @@ export default function Socials({
 }) {
   if (!props) return <></>;
   const { socials, targetLink } = props;
-  const coreStyleClass = 'm-2 antialiased';
-  let highlightedStyleClass = `origin-center transform-gpu scale-150 ${coreStyleClass} text-3xl text-red-700 font-bold`;
+  const coreStyleClass = 'promo-m-2 promo-antialiased';
+  let highlightedStyleClass = `promo-origin-center promo-transform-gpu promo-scale-150 ${coreStyleClass} promo-text-3xl promo-text-red-700 promo-font-bold`;
 
-  const styleClass = `${coreStyleClass} text-2xl text-gray-500`;
+  const styleClass = `${coreStyleClass} promo-text-2xl promo-text-gray-500`;
 
   function Icon({ keyName, highlight }: { keyName: string; highlight: any }) {
     if (keyName === 'LinkedIn')
@@ -116,7 +116,7 @@ export default function Socials({
     return <>{result}</>;
   }
   return (
-    <div className="inline-flex">
+    <div className="promo-inline-flex">
       {' '}
       <SocialNetworks socials={socials} />
     </div>
