@@ -15,6 +15,7 @@ import DialogHeader from './DialogHeader';
 import ThreeWords from './ThreeWords';
 import { useScript } from './lib/useScript';
 import { getToken } from './lib/getToken';
+import { generateAccessToken } from './lib/promo-node-utils';
 import HowItWorks from './HowItWorks';
 import SubmitButton from './SubmitButton';
 //import TeamEmail from './TeamEmail';
@@ -203,4 +204,4 @@ export function PromoButton({
   );
 }
 
-export { getToken };
+export { getToken, generateAccessToken };
