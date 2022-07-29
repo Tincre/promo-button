@@ -7,33 +7,33 @@
 
 export function FirstWord({ word, isHero }: { word: string; isHero: any }) {
   return !isHero ? (
-    <span className="animate-pulse bg-clip-text text-transparent bg-gradient-to-r from-gray-50 to-gray-300 group-hover:from-gray-700 group-hover:to-gray-900 block">
+    <span className="promo-animate-pulse promo-bg-clip-text promo-text-transparent promo-bg-gradient-to-r promo-from-gray-50 promo-to-gray-300 group-hover:promo-from-gray-700 group-hover:promo-to-gray-900 block">
       {word}
     </span>
   ) : (
-    <span className="text-2xl animate-pulse bg-clip-text text-transparent bg-gradient-to-r from-gray-50 to-gray-300 group-hover:from-gray-700 group-hover:to-gray-900 block">
+    <span className="promo-text-2xl promo-animate-pulse promo-bg-clip-text promo-text-transparent promo-bg-gradient-to-r promo-from-gray-50 promo-to-gray-300 group-hover:promo-from-gray-700 group-hover:promo-to-gray-900 promo-block">
       {word}
     </span>
   );
 }
 export function SecondWord({ word, isHero }: { word: string; isHero: any }) {
   return !isHero ? (
-    <span className="animate-pulse bg-clip-text text-transparent bg-gradient-to-l from-gray-50 to-gray-300 group-hover:from-gray-700 group-hover:to-gray-900 block">
+    <span className="promo-animate-pulse promo-bg-clip-text promo-text-transparent promo-bg-gradient-to-l promo-from-gray-50 promo-to-gray-300 group-hover:promo-from-gray-700 group-hover:promo-to-gray-900 promo-block">
       {word}
     </span>
   ) : (
-    <span className="text-2xl animate-pulse bg-clip-text text-transparent bg-gradient-to-l from-gray-50 to-gray-300 group-hover:from-gray-700 group-hover:to-gray-900 block">
+    <span className="promo-text-2xl promo-animate-pulse promo-bg-clip-text text-transparent promo-bg-gradient-to-l promo-from-gray-50 promo-to-gray-300 group-hover:promo-from-gray-700 group-hover:promo-to-gray-900 block">
       {word}
     </span>
   );
 }
 export function ThirdWord({ word, isHero }: { word: string; isHero: any }) {
   return !isHero ? (
-    <span className="animate-pulse bg-clip-text text-transparent bg-gradient-to-l from-red-500 to-red-700 group-hover:from-red-700 group-hover:to-red-900 block">
+    <span className="promo-animate-pulse promo-bg-clip-text promo-text-transparent promo-bg-gradient-to-l promo-from-red-500 promo-to-red-700 promo-group-hover:promo-from-red-700 group-hover:promo-to-red-900 promo-block">
       {word}
     </span>
   ) : (
-    <span className="text-2xl animate-pulse bg-clip-text text-transparent bg-gradient-to-l from-red-500 to-red-700 group-hover:from-red-700 group-hover:to-red-900 block">
+    <span className="promo-text-2xl promo-animate-pulse promo-bg-clip-text promo-text-transparent promo-bg-gradient-to-l promo-from-red-500 promo-to-red-700 group-hover:promo-from-red-700 group-hover:promo-to-red-900 promo-block">
       {word}
     </span>
   );

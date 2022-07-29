@@ -59,7 +59,7 @@ export default function RealEasyLogo({
 
   return (
     <div className="promo-button-modal-logo" id="promo-modal-logo">
-      <div className="inline-flex justify-center items-center content-center text-xl text-red-700 font-semibold">
+      <div className="promo-inline-flex promo-justify-center promo-items-center promo-content-center promo-text-xl promo-text-red-700 promo-font-semibold">
         <RealEasyImage
           height={40}
           width={212}

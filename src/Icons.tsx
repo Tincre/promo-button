@@ -5,7 +5,6 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import React from 'react';
 import facebook from './assets/facebook.svg';
 import twitter from './assets/twitter.svg';
 import linkedin from './assets/linkedin.svg';
@@ -36,8 +35,8 @@ export function XIcon({ className }: { className: string }) {
   );
 }
 export function SpinningCircleIcon({ color }: { color?: string | undefined }) {
-  const className = `animate-spin -ml-1 mr-3 h-5 w-5 ${
-    color || 'text-gray-900'
+  const className = `promo-animate-spin -promo-ml-1 promo-mr-3 promo-h-5 promo-w-5 ${
+    color || 'promo-text-gray-900'
   }`;
   return (
     <svg className={className} viewBox="0 0 24 24">
@@ -50,7 +49,7 @@ export function SpinningCircleIcon({ color }: { color?: string | undefined }) {
         strokeWidth="4"
       ></circle>
       <path
-        className="opacity-75"
+        className="promo-opacity-75"
         fill="currentColor"
         d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
       ></path>
@@ -70,7 +69,6 @@ function BaseIcon({
   height?: string | number | undefined;
   alt?: string | undefined;
 }) {
-  console.log(`BaseIcon: ${src}`);
   return (
     <img
       src={src}

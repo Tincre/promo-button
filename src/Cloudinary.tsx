@@ -45,7 +45,7 @@ export default function Cloudinary({
   let widget = getWidget(setFileImage);
   return (
     <>
-      <div className="mt-3" id="cloudinary-upload-widget">
+      <div className="promo-mt-3" id="cloudinary-upload-widget">
         <label
           htmlFor="cloudinary-upload-widget"
           className="promo-button-upload-button-label"
@@ -62,17 +62,17 @@ export default function Cloudinary({
             Ad creative upload tool
           </button>
         ) : (
-          <div className="text-center px-4 py-4">
+          <div className="promo-text-center promo-px-4 promo-py-4">
             <button type="button" onClick={() => showWidget(widget)}>
               {!!mediaUrlType && mediaUrlType === 'image' ? (
                 <img
-                  className="rounded-md max-h-48"
+                  className="promo-rounded-md promo-max-h-48"
                   src={imageData.secure_url}
                   alt="uploaded promo ad campaign static media"
                 />
               ) : !!mediaUrlType && mediaUrlType === 'video' ? (
                 <video
-                  className="rounded-md max-h-48"
+                  className="promo-rounded-md promo-max-h-48"
                   controls
                   src={imageData.secure_url}
                 ></video>
