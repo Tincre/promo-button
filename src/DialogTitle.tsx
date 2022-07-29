@@ -9,7 +9,7 @@ export function CloseButtonXIcon({ onClose }: { onClose: any }) {
         className="promo-button-close-icon-inner"
         onClick={() => onClose(false)}
       >
-        <span className="sr-only">Close</span>
+        <span className="promo-sr-only">Close</span>
         <XIcon className="promo-button-close-icon-size" aria-hidden="true" />
       </button>
     </div>

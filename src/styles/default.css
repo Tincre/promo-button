@@ -6,101 +6,101 @@
  * class names below.
  */
 .promo-button-main {
-  @apply inline-block md:py-3 md:mr-2 uppercase leading-none text-white bg-black hover:bg-gray-100 px-3 py-2 rounded-md shadow
+  @apply promo-inline-block md:promo-py-3 md:promo-mr-2 promo-uppercase promo-leading-none promo-text-white promo-bg-black hover:promo-bg-gray-100 promo-px-3 promo-py-2 promo-rounded-md promo-shadow
 }
 .promo-button-hero {
-  @apply inline-block px-24 py-24 uppercase leading-none text-white bg-black hover:bg-gray-100 rounded-md shadow
+  @apply promo-inline-block promo-px-24 promo-py-24 promo-uppercase promo-leading-none promo-text-white promo-bg-black hover:promo-bg-gray-100 promo-rounded-md promo-shadow
 }
 .promo-button-circle {
-  @apply inline-block px-6 py-3 bg-black text-white hover:bg-gray-100 uppercase leading-none rounded-full shadow
+  @apply promo-inline-block promo-px-6 promo-py-3 promo-bg-black promo-text-white hover:promo-bg-gray-100 promo-uppercase promo-leading-none promo-rounded-full promo-shadow
 
 }
 .promo-button-plain {
-  @apply inline-block px-6 py-3 bg-black text-white uppercase leading-none rounded-md shadow
+  @apply promo-inline-block promo-px-6 promo-py-3 promo-bg-black promo-text-white promo-uppercase promo-leading-none promo-rounded-md promo-shadow
 
 }
 .promo-button-square {
-  @apply inline-block px-4 py-4 uppercase leading-none text-white bg-black hover:bg-gray-100 rounded-md shadow
+  @apply promo-inline-block promo-px-4 promo-py-4 promo-uppercase promo-leading-none promo-text-white promo-bg-black hover:promo-bg-gray-100 promo-rounded-md promo-shadow
 }
 .promo-button-image-upload-error {
-  @apply text-sm font-medium italic text-brand mb-2
+  @apply promo-text-sm promo-font-medium promo-italic promo-text-brand promo-mb-2
 }
 .promo-button-target-link-error {
-  @apply text-sm font-medium italic text-brand mb-2
+  @apply promo-text-sm promo-font-medium promo-italic promo-text-brand promo-mb-2
 }
 .promo-button-close-icon-outer {
-  @apply block absolute top-0 right-0 pt-4 pr-4
+  @apply promo-block promo-absolute promo-top-0 promo-right-0 promo-pt-4 promo-pr-4
 }
 .promo-button-close-icon-inner {
-  @apply bg-white rounded-md text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-transparent
+  @apply promo-bg-white promo-rounded-md promo-text-gray-400 hover:promo-text-gray-500 focus:promo-outline-none focus:promo-ring-2 focus:promo-ring-offset-2 focus:promo-ring-transparent
 }
 .promo-button-close-icon-size {
-  @apply h-6 w-6
+  @apply promo-h-6 promo-w-6
 }
 
 .promo-button-dialog-outer {
-  @apply fixed z-10 inset-0 overflow-y-auto
+  @apply promo-fixed promo-z-10 promo-inset-0 promo-overflow-y-auto
 }
 .promo-button-dialog-inner {
-  @apply flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0
+  @apply promo-flex promo-items-end promo-justify-center promo-min-h-screen promo-pt-4 promo-px-4 promo-pb-20 promo-text-center sm:promo-block sm:promo-p-0
 }
 .promo-button-text {
-  @apply mx-auto uppercase italic text-base font-bold subpixel-antialiased my-auto px-3
+  @apply promo-mx-auto promo-uppercase promo-italic promo-text-base promo-font-bold promo-subpixel-antialiased promo-my-auto promo-px-3
 }
 .promo-button-form-container { 
-  @apply inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6
+  @apply promo-inline-block promo-align-bottom promo-bg-white promo-rounded-lg promo-px-4 promo-pt-5 promo-pb-4 promo-text-left promo-overflow-hidden promo-shadow-xl promo-transform promo-transition-all sm:promo-my-8 sm:promo-align-middle sm:promo-max-w-sm sm:promo-w-full sm:promo-p-6
 }
 .promo-button-modal-logo {
-  @apply px-12 my-2 lg:my-5 relative flex justify-center content-center items-center
+  @apply promo-px-12 promo-my-2 lg:promo-my-5 promo-relative promo-flex promo-justify-center promo-content-center promo-items-center
 }
 .promo-button-dialog-title-text {
-  @apply text-lg leading-6 font-medium text-gray-900
+  @apply promo-text-lg promo-leading-6 promo-font-medium promo-text-gray-900
 }
 .promo-button-dialog-subtitle-text {
-  @apply text-sm italic text-gray-500
+  @apply promo-text-sm promo-italic promo-text-gray-500
 }
 .promo-button-dialog-submission-button {
-  @apply inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-brand antialiased text-lg sm:text-base font-bold tracking-wide text-white hover:bg-gray-200 hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand hover:text-black 
+  @apply promo-inline-flex promo-justify-center promo-w-full promo-rounded-md promo-border promo-border-transparent promo-shadow-sm promo-px-4 promo-py-2 promo-bg-brand promo-antialiased promo-text-lg sm:promo-text-base promo-font-bold promo-tracking-wide promo-text-white hover:promo-bg-gray-200 hover:promo-text-black focus:promo-outline-none focus:promo-ring-2 focus:promo-ring-offset-2 focus:promo-ring-brand hover:promo-text-black 
 }
 .promo-button-dialog-submission-button-disabled {
-  @apply disabled:bg-gray-800
+  @apply disabled:promo-bg-gray-800
 }
 .promo-button-ad-title-input-label {
-  @apply block text-sm font-medium text-gray-700
+  @apply promo-block promo-text-sm promo-font-medium promo-text-gray-700
 }
 .promo-button-ad-title-input-label-inner {
-  @apply text-xs italic text-gray-300
+  @apply promo-text-xs promo-italic promo-text-gray-300
 }
 .promo-button-ad-title-input {
-  @apply block w-full sm:text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand border-black focus:border-transparent rounded-md
+  @apply promo-block promo-w-full sm:promo-text-sm focus:promo-outline-none focus:promo-ring-2 focus:promo-ring-offset-2 focus:promo-ring-brand promo-border-black focus:promo-border-transparent promo-rounded-md
 }
 .promo-button-ad-title-input-container {
-  @apply mt-1 rounded-md shadow-sm
+  @apply promo-mt-1 promo-rounded-md promo-shadow-sm
 }
 .promo-button-target-link-input {
-  @apply block w-full sm:text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand border-black focus:border-transparent rounded-md
+  @apply promo-block promo-w-full sm:promo-text-sm focus:promo-outline-none focus:promo-ring-2 focus:promo-ring-offset-2 focus:promo-ring-brand promo-border-black focus:promo-border-transparent promo-rounded-md
 }
 .promo-button-target-link-input-container {
-  @apply mt-1 relative rounded-md shadow-sm
+  @apply promo-mt-1 promo-relative promo-rounded-md promo-shadow-sm
 }
 .promo-button-target-link-label {
-  @apply block text-sm font-medium text-gray-700
+  @apply promo-block promo-text-sm promo-font-medium promo-text-gray-700
 }
 .promo-button-range-input-label {
 
-  @apply block text-sm font-medium text-gray-700
+  @apply promo-block promo-text-sm promo-font-medium promo-text-gray-700
 }
 .promo-button-range-input {
-  @apply block w-full pl-16 sm:pl-14 sm:text-sm border-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand text-black hover:border-transparent rounded-md
+  @apply promo-block promo-w-full promo-pl-16 sm:promo-pl-14 sm:promo-text-sm promo-border-black focus:promo-outline-none focus:promo-ring-2 focus:promo-ring-offset-2 focus:promo-ring-brand promo-text-black hover:promo-border-transparent promo-rounded-md
 }
 .promo-button-range-input-container { 
-  @apply mt-1 rounded-md
+  @apply promo-mt-1 promo-rounded-md
 }
 .promo-button-upload-button {
-  @apply inline-flex justify-center w-full rounded-md border border-black shadow-sm px-4 py-2 bg-gray-50 text-base font-medium text-black hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand hover:text-gray-900 focus:border-transparent sm:text-sm
+  @apply promo-inline-flex promo-justify-center promo-w-full promo-rounded-md promo-border promo-border-black promo-shadow-sm promo-px-4 promo-py-2 promo-bg-gray-50 promo-text-base promo-font-medium promo-text-black hover:promo-bg-gray-200 focus:promo-outline-none focus:promo-ring-2 focus:promo-ring-offset-2 focus:promo-ring-brand hover:promo-text-gray-900 focus:promo-border-transparent sm:promo-text-sm
 }
 .promo-button-upload-button-label {
-  @apply mb-1 block text-sm font-medium text-gray-700
+  @apply promo-mb-1 promo-block promo-text-sm promo-font-medium promo-text-gray-700
 }
 
 @tailwind utilities;

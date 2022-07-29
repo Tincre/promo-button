@@ -140,12 +140,12 @@ export function PromoButton({
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0"
                   >
-                    <Dialog.Overlay className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+                    <Dialog.Overlay className="promo-fixed promo-inset-0 promo-bg-gray-500 promo-bg-opacity-75 promo-transition-opacity" />
                   </Transition.Child>
 
                   {/* This element is to trick the browser into centering the modal contents. */}
                   <span
-                    className="hidden sm:inline-block sm:align-middle sm:h-screen"
+                    className="promo-hidden sm:promo-inline-block sm:promo-align-middle sm:promo-h-screen"
                     aria-hidden="true"
                   >
                     &#8203;
@@ -168,7 +168,7 @@ export function PromoButton({
                         setIsOpen={setIsOpen}
                         logoSrc={logoSrc}
                       />
-                      <div className="mt-5 sm:mt-6">
+                      <div className="promo-mt-5 sm:promo-mt-6">
                         {!isSubmitted ? (
                           <div>
                             <AdTitleInput />
@@ -180,7 +180,7 @@ export function PromoButton({
                                 setFileImage={setFileImage}
                               />
                             </Suspense>
-                            <div className="mt-5 sm:mt-6">
+                            <div className="promo-mt-5 sm:promo-mt-6">
                               {imageUploadError && !fileImage ? (
                                 <ImageUploadError />
                               ) : null}

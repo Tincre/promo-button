@@ -17,7 +17,7 @@ export default function AdTitleInput({
   placeholder?: string;
 }) {
   return (
-    <div className="mt-0">
+    <div className="promo-mt-0">
       <label htmlFor="adTitle" className="promo-button-ad-title-input-label">
         Ad title{' '}
         <span className="promo-button-ad-title-input-label-inner">{`as you'd like it to display on your ads`}</span>

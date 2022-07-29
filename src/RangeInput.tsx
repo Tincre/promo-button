@@ -5,7 +5,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 /**
  * @description
@@ -25,7 +25,7 @@ export default function RangeInput({ rangeVal }: { rangeVal?: number }) {
   const minSpend = 50;
   const maxSpend = 10000;
   return (
-    <div className="mt-3">
+    <div className="promo-mt-3">
       <label htmlFor="budget" className="promo-button-range-input-label">
         {`Budget: $${rangeval}`}
       </label>
