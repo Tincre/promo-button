@@ -7,7 +7,7 @@ export function CloseButtonXIcon({ onClose }: { onClose: any }) {
       <button
         type="button"
         className="promo-button-close-icon-inner"
-        onClick={() => onClose(false)}
+        onClick={onClose}
       >
         <span className="promo-sr-only">Close</span>
         <XIcon className="promo-button-close-icon-size" aria-hidden="true" />
@@ -25,7 +25,19 @@ export default function DialogTitle({
   return (
     <Dialog.Title as="h3" className="promo-button-dialog-title-text">
       {!isSubmitted ? `Start a campaign` : `Success!`}{' '}
-      <CloseButtonXIcon onClose={setIsOpen} />
+      <div className="promo-button-close-icon-outer">
+        <button
+          type="button"
+          className="promo-button-close-icon-inner"
+          onClick={(e) => {
+            e.stopPropagation();
+            setIsOpen(false);
+          }}
+        >
+          <span className="promo-sr-only">Close</span>
+          <XIcon className="promo-button-close-icon-size" aria-hidden="true" />
+        </button>
+      </div>
     </Dialog.Title>
   );
 }
