@@ -11,4 +11,5 @@ module.exports = {
   corePlugins: {
     preflight: true,
   },
+  prefix: 'promo',
 };
