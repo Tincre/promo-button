@@ -6,11 +6,10 @@
  */
 
 import './styles/default.css';
-import React, { Suspense } from 'react';
+import React, { Suspense, Fragment, useState, useRef } from 'react';
 import RangeInput from './RangeInput';
 import TextInput from './TextInput';
 import AdTitleInput from './AdTitleInput';
-import { Fragment, useState, useRef } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import DialogHeader from './DialogHeader';
 import ThreeWords from './ThreeWords';
@@ -105,105 +104,102 @@ export function PromoButton({
     }
   };
   return (
-    <div className="">
-      <button
-        onClick={() => {
-          setIsOpen(!isOpen);
-          setIsSubmitted(false);
-        }}
-        className={mainButtonClassName}
-      >
-        <div className="promo-button-text">
-          <ThreeWords
-            {...{
-              words: buttonTextArray,
-              isHero: mainButtonClassName === 'promo-button-hero group',
-            }}
-          />
-          <div>
-            <Transition.Root show={isOpen} as={Fragment}>
-              <Dialog
-                as="div"
-                initialFocus={adTitleInputRef}
-                static
-                className="promo-button-dialog-outer"
-                open={isOpen}
-                onClose={() => setIsOpen(!isOpen)}
+    <button
+      onClick={() => {
+        setIsOpen(true);
+        setIsSubmitted(false);
+      }}
+      className={mainButtonClassName}
+    >
+      <div className="promo-button-text">
+        <ThreeWords
+          {...{
+            words: buttonTextArray,
+            isHero: mainButtonClassName === 'promo-button-hero group',
+          }}
+        />
+        <Transition.Root show={isOpen} as={Fragment}>
+          <Dialog
+            as="div"
+            initialFocus={adTitleInputRef}
+            static
+            className="promo-button-dialog-outer"
+            open={isOpen}
+            onClose={() => setIsOpen(false)}
+          >
+            <div className="promo-button-dialog-inner">
+              <Transition.Child
+                as={Fragment}
+                enter="promo-ease-out promo-duration-300"
+                enterFrom="promo-opacity-0"
+                enterTo="promo-opacity-100"
+                leave="promo-ease-in promo-duration-200"
+                leaveFrom="promo-opacity-100"
+                leaveTo="promo-opacity-0"
               >
-                <div className="promo-button-dialog-inner">
-                  <Transition.Child
-                    as={Fragment}
-                    enter="ease-out duration-300"
-                    enterFrom="opacity-0"
-                    enterTo="opacity-100"
-                    leave="ease-in duration-200"
-                    leaveFrom="opacity-100"
-                    leaveTo="opacity-0"
-                  >
-                    <Dialog.Overlay className="promo-fixed promo-inset-0 promo-bg-gray-500 promo-bg-opacity-75 promo-transition-opacity" />
-                  </Transition.Child>
+                <Dialog.Overlay className="promo-fixed promo-inset-0 promo-bg-gray-500 promo-bg-opacity-75 promo-transition-opacity" />
+              </Transition.Child>
 
-                  {/* This element is to trick the browser into centering the modal contents. */}
-                  <span
-                    className="promo-hidden sm:promo-inline-block sm:promo-align-middle sm:promo-h-screen"
-                    aria-hidden="true"
-                  >
-                    &#8203;
-                  </span>
-                  <Transition.Child
-                    as={Fragment}
-                    enter="ease-out duration-300"
-                    enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                    enterTo="opacity-100 translate-y-0 sm:scale-100"
-                    leave="ease-in duration-200"
-                    leaveFrom="opacity-100 translate-y-0 sm:scale-100"
-                    leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                  >
-                    <form
-                      onSubmit={submitCampaign}
-                      className="promo-button-form-container"
-                    >
-                      <DialogHeader
-                        isSubmitted={isSubmitted}
-                        setIsOpen={setIsOpen}
-                        logoSrc={logoSrc}
-                      />
-                      <div className="promo-mt-5 sm:promo-mt-6">
-                        {!isSubmitted ? (
-                          <div>
-                            <AdTitleInput />
-                            <TextInput />
-                            <RangeInput />
-                            <Suspense fallback={<div>Loading...</div>}>
-                              <Cloudinary
-                                imageData={fileImage}
-                                setFileImage={setFileImage}
-                              />
-                            </Suspense>
-                            <div className="promo-mt-5 sm:promo-mt-6">
-                              {imageUploadError && !fileImage ? (
-                                <ImageUploadError />
-                              ) : null}
-                              {targetLinkError ? <TargetLinkError /> : null}
-                              <SubmitButton
-                                isSubmitting={isSubmitting}
-                                fileImage={fileImage}
-                              />
-                            </div>
-                          </div>
-                        ) : (
-                          <HowItWorks />
-                        )}
+              {/* This element is to trick the browser into centering the modal contents. */}
+              <span
+                className="promo-hidden sm:promo-inline-block sm:promo-align-middle sm:promo-h-screen"
+                aria-hidden="true"
+              >
+                &#8203;
+              </span>
+              <Transition.Child
+                as={Fragment}
+                enter="promo-ease-out promo-duration-300"
+                enterFrom="promo-opacity-0 promo-translate-y-4 sm:promo-translate-y-0 sm:promo-scale-95"
+                enterTo="promo-opacity-100 promo-translate-y-0 sm:promo-scale-100"
+                leave="promo-ease-in promo-duration-200"
+                leaveFrom="promo-opacity-100 promo-translate-y-0 sm:promo-scale-100"
+                leaveTo="promo-opacity-0 promo-translate-y-4 sm:promo-translate-y-0 sm:promo-scale-95"
+              >
+                <form
+                  onSubmit={submitCampaign}
+                  className="promo-button-form-container"
+                >
+                  <DialogHeader
+                    isSubmitted={isSubmitted}
+                    setIsOpen={setIsOpen}
+                    logoSrc={logoSrc}
+                  />
+
+                  <div className="promo-mt-5 sm:promo-mt-6">
+                    {!isSubmitted ? (
+                      <div>
+                        <AdTitleInput />
+                        <TextInput />
+                        <RangeInput />
+                        <Suspense fallback={<div>Loading...</div>}>
+                          <Cloudinary
+                            imageData={fileImage}
+                            setFileImage={setFileImage}
+                          />
+                        </Suspense>
+                        <div className="promo-mt-5 sm:promo-mt-6">
+                          {imageUploadError && !fileImage ? (
+                            <ImageUploadError />
+                          ) : null}
+                          {targetLinkError ? <TargetLinkError /> : null}
+                          <SubmitButton
+                            isSubmitting={isSubmitting}
+                            fileImage={fileImage}
+                          />
+                        </div>
                       </div>
-                    </form>
-                  </Transition.Child>
-                </div>
-              </Dialog>
-            </Transition.Root>
-          </div>
-        </div>
-      </button>
-    </div>
+                    ) : (
+                      <HowItWorks />
+                    )}
+                  </div>
+                </form>
+              </Transition.Child>
+            </div>
+          </Dialog>
+        </Transition.Root>
+      </div>
+    </button>
   );
 }
 
