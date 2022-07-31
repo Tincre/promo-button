@@ -166,10 +166,10 @@
   dependencies:
     tslib "^2.4.0"
 
-"@tincre/promo-button@^0.1.3":
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/@tincre/promo-button/-/promo-button-0.1.3.tgz#ef8140d428fc915178f20cba914acad1a1e2e551"
-  integrity sha512-+AyInU4OxufmCf0fSzTYGdztUgfzHXS67swKagu8p8P347NBgmwk3e26TiNr4QQV4Zu346qPoWwZbQ94CZ8vkg==
+"@tincre/promo-button@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@tincre/promo-button/-/promo-button-0.2.2.tgz#f697b0375f51862403fc429d0b0eda8e7257edfd"
+  integrity sha512-GKsBt5jsYLNN1irFqpZyKVfiLM1Tzf0sWk2xfqaPr1K0OvXYpyed6u5nV4AteIIzHDe7sbwWE9tqvYrwTmuoSA==
   dependencies:
     cross-fetch "^3.1.5"
 
