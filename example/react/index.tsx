@@ -2,7 +2,7 @@ import * as ReactDOM from 'react-dom';
 import 'react-app-polyfill/ie11';
 import { PromoButton } from '../../dist/promo-button.esm.js'//'@tincre/promo-button';
 import '../../dist/promo-button.esm.css'; 
-
+import styles from './Home.module.css';
 const App = () => {
   return (
     <div style={{ textAlign: 'center', marginTop: '20px' }}>
@@ -20,7 +20,15 @@ const App = () => {
         <code>npm install @tincre/promo-button</code>
       </p>
       <p
-        style={{ marginTop: '20px', marginBottom: '10px', fontWeight: 'bold' }}
+                    className={styles.card}
+            style={{
+              marginTop: '2rem',
+              marginBottom: '2rem',
+              fontWeight: 'bold',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              textAlign: 'center',
+            }}
       >
         <a
           target="_blank"
@@ -31,14 +39,22 @@ const App = () => {
         </a>
       </p>
       <p
-        style={{ marginTop: '20px', marginBottom: '10px', fontWeight: 'bold' }}
+            className={styles.card}
+            style={{
+              marginTop: '2rem',
+              marginBottom: '2rem',
+              fontWeight: 'bold',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              textAlign: 'center',
+            }}
       >
         <a
           target="_blank"
           rel="noreferrer noopener"
-          href="https://community.tincre.dev/c/promo-api"
+          href="https://community.tincre.dev/c/promo-button"
         >
-          Community
+          Abuse your community
         </a>
       </p>
     </div>

@@ -32,10 +32,14 @@ const Home: NextPage = () => {
             <code>npm install @tincre/promo-button</code>
           </p>
           <p
+            className={styles.card}
             style={{
-              marginTop: '20px',
-              marginBottom: '10px',
+              marginTop: '2rem',
+              marginBottom: '2rem',
               fontWeight: 'bold',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              textAlign: 'center',
             }}
           >
             <a
@@ -47,16 +51,20 @@ const Home: NextPage = () => {
             </a>
           </p>
           <p
+            className={styles.card}
             style={{
-              marginTop: '20px',
-              marginBottom: '10px',
+              marginTop: '2rem',
+              marginBottom: '2rem',
               fontWeight: 'bold',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              textAlign: 'center',
             }}
           >
             <a
               target="_blank"
               rel="noreferrer noopener"
-              href="https://community.tincre.dev/c/promo-api"
+              href="https://community.tincre.dev/c/promo-button"
             >
               Abuse your community
             </a>
