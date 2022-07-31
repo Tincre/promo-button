@@ -28,6 +28,13 @@
     "start": "dts watch",
     "test": "dts test --passWithNoTests --coverage"
   },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "crypto": false,
+    "stream": false,
+    "util": false
+  },
   "husky": {
     "hooks": {
       "pre-commit": "dts lint --fix"

@@ -5,7 +5,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { detectMediaType } from './utils';
+import { detectMediaType } from './lib/utils';
 
 function getWidget(setFileImage: any) {
   if (typeof window.cloudinary === 'undefined') return null;
