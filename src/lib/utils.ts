@@ -8,7 +8,7 @@
  */
 
 import { IMAGE_EXTENSIONS, VIDEO_EXTENSIONS } from './constants';
-import defaultOptions from './defaultOptions'
+import defaultOptions from './defaultOptions';
 /**
  * A fetcher for useSwr
  *
@@ -47,7 +47,7 @@ function detectMediaType(url: string) {
  * getOptions
  *
  * Get the promo-button configuration object.
- * 
+ *
  * @param options an options object from the user or undefined
  * @returns Object with promo-button configuration key-value pairs.
  */

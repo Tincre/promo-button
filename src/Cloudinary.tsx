@@ -9,10 +9,10 @@ import { detectMediaType, getOptions } from './lib/utils';
 
 function getWidget(setFileImage: any, cloudinaryOptions?: undefined | object) {
   if (typeof window.cloudinary === 'undefined') return null;
-  let options = getOptions(cloudinaryOptions); 
-  console.debug(`getCloudinary options set: ${JSON.stringify(options)}`)
+  let options = getOptions(cloudinaryOptions);
+  console.debug(`getCloudinary options set: ${JSON.stringify(options)}`);
   let widget = window.cloudinary.createUploadWidget(
-    options.cloudinary, 
+    options.cloudinary,
     (error: any, result: any) => {
       if (!error && result && result.event === 'success') {
         setFileImage({ ...result.info });
