@@ -18,6 +18,7 @@ import { getToken } from './lib/getToken';
 import { generateAccessToken } from './lib/promo-node-utils';
 import HowItWorks from './HowItWorks';
 import SubmitButton from './SubmitButton';
+import { Options } from './lib/defaultOptions';
 //import TeamEmail from './TeamEmail';
 import { TargetLinkError, ImageUploadError } from './Errors';
 const Cloudinary = React.lazy(() => import('./Cloudinary'));
@@ -28,12 +29,14 @@ export function PromoButton({
   words,
   email,
   backend,
+  options,
 }: {
   logoSrc: string;
   shape: string;
   words: Array<string>;
   email: string;
   backend: string;
+  options?: undefined | Options;
 }) {
   let [isOpen, setIsOpen] = useState(false);
   let [isSubmitted, setIsSubmitted] = useState(false);
@@ -75,7 +78,7 @@ export function PromoButton({
         budget: event.target.budget.value,
         email: email,
         creative_uri: [fileImage],
-        asset_title: event.target.name.value,
+        asset_title: event.target.adTitle.value || event.target.name.value,
       };
       const response = await fetch(backend, {
         body: JSON.stringify(data),
@@ -177,6 +180,7 @@ export function PromoButton({
                           <Cloudinary
                             imageData={fileImage}
                             setFileImage={setFileImage}
+                            options={options?.cloudinary}
                           />
                         </Suspense>
                         <div className="promo-mt-5 sm:promo-mt-6">
