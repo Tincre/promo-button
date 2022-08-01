@@ -78,7 +78,7 @@ export function PromoButton({
         budget: event.target.budget.value,
         email: email,
         creative_uri: [fileImage],
-        asset_title: event.target.name.value,
+        asset_title: event.target.adTitle.value || event.target.name.value,
       };
       const response = await fetch(backend, {
         body: JSON.stringify(data),
@@ -180,6 +180,7 @@ export function PromoButton({
                           <Cloudinary
                             imageData={fileImage}
                             setFileImage={setFileImage}
+                            options={options?.cloudinary}
                           />
                         </Suspense>
                         <div className="promo-mt-5 sm:promo-mt-6">
