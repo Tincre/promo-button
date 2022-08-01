@@ -18,6 +18,7 @@ import { getToken } from './lib/getToken';
 import { generateAccessToken } from './lib/promo-node-utils';
 import HowItWorks from './HowItWorks';
 import SubmitButton from './SubmitButton';
+import { Options } from './lib/defaultOptions';
 //import TeamEmail from './TeamEmail';
 import { TargetLinkError, ImageUploadError } from './Errors';
 const Cloudinary = React.lazy(() => import('./Cloudinary'));
@@ -28,12 +29,14 @@ export function PromoButton({
   words,
   email,
   backend,
+  options,
 }: {
   logoSrc: string;
   shape: string;
   words: Array<string>;
   email: string;
   backend: string;
+  options?: undefined | Options;
 }) {
   let [isOpen, setIsOpen] = useState(false);
   let [isSubmitted, setIsSubmitted] = useState(false);
