@@ -5,17 +5,18 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { detectMediaType } from './lib/utils';
+import { detectMediaType, getOptions } from './lib/utils';
+import { CloudinaryOptions } from './lib/defaultOptions';
 
-function getWidget(setFileImage: any) {
+function getWidget(
+  setFileImage: any,
+  cloudinaryOptions?: undefined | CloudinaryOptions
+) {
   if (typeof window.cloudinary === 'undefined') return null;
+  let options = getOptions(cloudinaryOptions);
+  console.debug(`getCloudinary options set: ${JSON.stringify(options)}`);
   let widget = window.cloudinary.createUploadWidget(
-    {
-      cloudName: `b00st`, // upload cloudName value
-      uploadPreset: `uscb5ifq`, // TODO Update preseet values
-      folder: 'B00STButton', // TODO folder value
-      multiple: true,
-    },
+    options.cloudinary,
     (error: any, result: any) => {
       if (!error && result && result.event === 'success') {
         setFileImage({ ...result.info });
@@ -35,14 +36,16 @@ function showWidget(widget: any) {
 export default function Cloudinary({
   imageData,
   setFileImage,
+  options,
 }: {
   imageData: any;
   setFileImage: any;
+  options?: undefined | CloudinaryOptions;
 }) {
   // TODO add func input for alt text (should take copy generated for ad)
   const mediaUrlType = detectMediaType(imageData?.secure_url);
   // TODO render <video> or <img> as appropriate
-  let widget = getWidget(setFileImage);
+  let widget = getWidget(setFileImage, options);
   return (
     <>
       <div className="promo-mt-3" id="cloudinary-upload-widget">
